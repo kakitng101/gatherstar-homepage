@@ -1,0 +1,529 @@
+<!DOCTYPE html><html lang=en><head><meta charSet=utf-8 /><meta content="IE=edge" http-equiv=X-UA-Compatible /><title>Open RTB Bid Request Specifications · Documentation</title><meta content="width=device-width,initial-scale=1" name=viewport /><meta content=Docusaurus name=generator /><meta content="## Suggested Bid Request Headers" name=description /><meta content=en name=docsearch:language /><meta content="Open RTB Bid Request Specifications · Documentation" property=og:title /><meta content=website property=og:type /><meta content=../../../../../index.html property=og:url /><meta content="## Suggested Bid Request Headers" property=og:description /><meta content=../../../../../img/docusaurus.html property=og:image /><meta content=summary name=twitter:card /><meta content=../../../../../img/docusaurus.html name=twitter:image /><link href=../../../../../img/favicon.png rel="shortcut icon"/><link href=../../../../../../cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css rel=stylesheet /><link href=../../../../../../cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css rel=stylesheet /><script src=../../../../../../cdn.cookielaw.org/consent/ddf2749f-45af-42cb-91a1-cca420436707/OtAutoBlock.js></script><script src=../../../../../js/cookielaw.js></script><script src=../../../../../js/postback.js></script><script src=../../../../../../cdn.cookielaw.org/scripttemplates/otSDKStub.js data-domain-script=ddf2749f-45af-42cb-91a1-cca420436707></script><script src=../../../../../js/scrollSpy.js></script><link href=../../../../../css/main.css rel=stylesheet /><script src=../../../../../js/codetabs.js></script></head><body class="separateOnPageNav sideNavVisible"><div class=fixedHeaderContainer style=background:#0077fd><div class="wrapper headerWrapper"><header><a href=../../../../../index.html><img alt=Documentation src=../../../../../img/exads.svg class=logo /><h2 class=headerTitleWithLogo>Documentation</h2></a><div class="navigationSlider navigationWrapper"><nav class=slidingNav><ul class="nav-site nav-site-internal"><li class=""><a href=../../../../introduction/index.html target=_self>General</a></li><li class=""><a href=../../../../advertisers-introduction/index.html target=_self>Advertisers</a></li><li class=""><a href=../../../../publishers-introduction/index.html target=_self>Publishers</a></li><li class=siteNavGroupActive><a href=../../../../rtb-demand/index.html target=_self>RTB</a></li><li class=""><a href=../../../../api-manual-overview/index.html target=_self>API</a></li><li class=""><a href=../../../../api-manual-overview/index.html target=_self></a></li><li class=""><a target=_self></a></li><li class="navSearchWrapper reactNavSearchWrapper" style=display:none!important><input id=search_input_react placeholder=Search title=Search type=text /></li></ul></nav></div></header></div></div><div class=navPusher><div class="wrapper docMainWrapper"><div class=docsNavContainer id=docsNav><nav class=toc><div class=toggleNav><section class="wrapper navWrapper"><div class="wrapper navBreadcrumb"><div class=navToggle id=navToggler><div class=hamburger-menu><div class=line1></div><div class=line2></div><div class=line3></div></div></div><h2><i>›</i><span>Open RTB</span></h2><div class=tocToggler id=tocToggler><i class=icon-toc></i></div></div><div class=navGroups><div class=navGroup><h3 class="collapsible navGroupCategoryTitle">Advertisers<span class=arrow><svg height=24 viewBox="0 0 24 24" width=24><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill=#565656></path><path d="M0 0h24v24H0z" fill=none></path></svg></span></h3><ul class=hide><li class=navListItem><a href=../../../../rtb-demand/index.html class=navItem>Advertisers RTB Overview</a></li><li class=navListItem><a href=../../../../ad-exchange-partners-advertisers/index.html class=navItem>Ad Exchange Partners</a></li><li class=navListItem><a href=../../../../advertising-demand/index.html class=navItem>Integrating Advertising Demand</a></li><div class="navGroup subNavGroup"><h4 class=navGroupSubcategoryTitle>Open RTB</h4><ul><li class=navListItem><a href=../../../../rtb-advertisers/open-rtb/open-rtb-advertisers/index.html class=navItem>Open RTB Integration</a></li><li class=navListItem><a href=../../../../rtb-advertisers/open-rtb/bid-request/open-rtb-advertisers-request/index.html class=navItem>Open RTB 2.4 Bid Request</a></li><li class=navListItem><a href=../../../../rtb-advertisers/open-rtb/bid-response/open-rtb-advertisers-response/index.html class=navItem>Open RTB 2.4 Bid Response</a></li><li class=navListItem><a href=../../../../open-rtb-2p5-adv-request-generic/index.html class=navItem>Open RTB 2.5 Bid Request</a></li><li class=navListItem><a href=../../../../open-rtb-2p5-adv-response-generic/index.html class=navItem>Open RTB 2.5 Bid Response</a></li><li class=navListItem><a href=../../../../open-rtb-advertisers-request-2p5/index.html class=navItem>Prebid / OpenRTB 2.5 Bid Request</a></li><li class=navListItem><a href=../../../../open-rtb-advertisers-response-2p5/index.html class=navItem>Prebid / OpenRTB 2.5 Bid Response</a></li></ul></div><div class="navGroup subNavGroup"><h4 class=navGroupSubcategoryTitle>GatherStar RTB</h4><ul><li class=navListItem><a href=../../../../rtb-advertisers/exads-rtb/exads-rtb-advertisers/index.html class=navItem>GatherStar RTB Integration</a></li><li class=navListItem><a href=../../../../rtb-advertisers/exads-rtb/bid-request/exads-rtb-advertisers-request/index.html class=navItem>GatherStar RTB Bid Request</a></li><li class=navListItem><a href=../../../../rtb-advertisers/exads-rtb/bid-response/exads-rtb-advertisers-response/index.html class=navItem>GatherStar RTB Bid Response</a></li></ul></div></ul></div><div class=navGroup><h3 class="collapsible navGroupCategoryTitle">Publishers<span class=arrow><svg height=24 viewBox="0 0 24 24" width=24><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill=#565656></path><path d="M0 0h24v24H0z" fill=none></path></svg></span></h3><ul class=hide><li class=navListItem><a href=../../../../rtb-supply/index.html class=navItem>Publishers RTB Overview</a></li><li class=navListItem><a href=../../../../ad-exchange-partners-publishers/index.html class=navItem>Ad Exchange Partners</a></li><li class=navListItem><a href=../../../../publishing-supply/index.html class=navItem>Integrating Publishing Supply</a></li><div class="navGroup subNavGroup"><h4 class=navGroupSubcategoryTitle>Open RTB</h4><ul><li class=navListItem><a href=../../open-rtb-publishers/index.html class=navItem>Open RTB Integration</a></li><li class="navListItem navListItemActive"><a href=index.html class=navItem>Open RTB 2.4 Bid Request</a></li><li class=navListItem><a href=../../bid-response/open-rtb-publishers-response/index.html class=navItem>Open RTB 2.4 Bid Response</a></li><li class=navListItem><a href=../../../../open-rtb-2p5-pub-request-generic/index.html class=navItem>Open RTB 2.5 Bid Request</a></li><li class=navListItem><a href=../../../../open-rtb-2p5-pub-response-generic/index.html class=navItem>Open RTB 2.5 Bid Response</a></li><li class=navListItem><a href=../../../../open-rtb-2p5-pub-request/index.html class=navItem>Prebid / Open RTB 2.5 Bid Request</a></li><li class=navListItem><a href=../../../../open-rtb-2p5-pub-response/index.html class=navItem>Prebid / Open RTB 2.5 Bid Response</a></li></ul></div><div class="navGroup subNavGroup"><h4 class=navGroupSubcategoryTitle>GatherStar RTB</h4><ul><li class=navListItem><a href=../../../exads-rtb/exads-rtb-publishers/index.html class=navItem>GatherStar RTB Integration</a></li><li class=navListItem><a href=../../../exads-rtb/bid-request/exads-rtb-publishers-request/index.html class=navItem>GatherStar RTB Bid Request</a></li><li class=navListItem><a href=../../../exads-rtb/bid-response/exads-rtb-publishers-response/index.html class=navItem>GatherStar RTB Bid Response</a></li></ul></div></ul></div><div class=navGroup><h3 class="collapsible navGroupCategoryTitle">IP Networks<span class=arrow><svg height=24 viewBox="0 0 24 24" width=24><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill=#565656></path><path d="M0 0h24v24H0z" fill=none></path></svg></span></h3><ul class=hide><li class=navListItem><a href=../../../../rtb-advertisers/ip-networks/ip-networks/index.html class=navItem>IP Networks</a></li></ul></div></div></section></div><script>for(var e=document.getElementsByClassName("collapsible"),t=!0,n=0;n<e.length;n++){var o=e[n].nextElementSibling.getElementsByTagName("*");if(t)for(var i=0;i<o.length;i++)if(o[i].classList.contains("navListItemActive")){e[n].nextElementSibling.classList.toggle("hide"),e[n].childNodes[1].classList.toggle("rotate"),t=!1;break}e[n].addEventListener("click",function(){this.childNodes[1].classList.toggle("rotate"),this.nextElementSibling.classList.toggle("hide")})}document.addEventListener("DOMContentLoaded",function(){t("#navToggler","#docsNav","docsSliderActive"),t("#tocToggler","body","tocActive");var e=document.querySelector(".toc-headings");function t(e,t,n){var o=document.querySelector(e),i=document.querySelector(t);o&&(o.onclick=function(e){e.preventDefault(),i.classList.toggle(n)})}e&&e.addEventListener("click",function(t){for(var n=t.target;n!==e;){if("A"===n.tagName){document.body.classList.remove("tocActive");break}n=n.parentNode}},!1)});</script></nav></div><div class="container docsContainer mainContainer"><div class=wrapper><div class=post><header class=postHeader><h1 class=postHeaderTitle id=__docusaurus>Open RTB Bid Request Specifications</h1></header><article><div><span><h2><a class=anchor aria-hidden=true id=suggested-bid-request-headers></a><a href=#suggested-bid-request-headers class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Suggested Bid Request Headers</h2><ul><li>OpenRTB Version HTTP Header: x-openrtb-version: 2.4</li><li>Keep-Alive HTTP Header: Connection: Keep-Alive</li><li>Content JSON: Content-Type: application/json</li></ul><p>The following objects should be sent encoded as JSON in the request body:  </p><p><a name=bid-request></a></p><h2><a class=anchor aria-hidden=true id=bid-request></a><a href=#bid-request class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Bid Request</h2><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>at</td><td>Yes</td><td>Auction type, first price = 1 (int)</td></tr><tr><td>id</td><td>Yes</td><td>Unique bid request ID (string)</td></tr><tr><td>imp</td><td>Yes</td><td>Array of Imp objects representing the impressions offered (object)</td></tr><tr><td>site</td><td>Yes</td><td>Details via a Site object about the publisher’s website* (object)</td></tr><tr><td>app</td><td>Yes</td><td>Details via an App object about the publisher’s app* (object)</td></tr><tr><td>device</td><td>Yes</td><td>Details via a Device object about the user’s device to which the impression will be delivered (object)</td></tr><tr><td>user</td><td>No</td><td>Details via a User object about the human user of the device; the advertising audience (object)</td></tr><tr><td>bcat</td><td>No</td><td>Blocked advertiser categories using the IAB content categories (string array)</td></tr><tr><td>ext</td><td>No</td><td>Placeholder for extensions to OpenRTB</td></tr></tbody></table><hr><p><strong>Note</strong>: *Only one of the objects {site, app} should be present in each request.</p><hr><p> </p><p><a name=imp></a></p><h2><a class=anchor aria-hidden=true id=imp></a><a href=#imp class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>imp</h2><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>Yes</td><td>Unique impression ID within this bid request (string)</td></tr><tr><td>bidfloor</td><td>No</td><td>Minimum bid for this impression (CPM) / click (CPC) and account currency, optional (float)</td></tr><tr><td>bidfloorcur</td><td>No</td><td>Currency for minimum bid value specified using ISO-4217 alpha codes, optional (string)</td></tr><tr><td>native</td><td>Only for native imps</td><td>A Native object ; required if this impression is offered as a native ad opportunity (object)</td></tr><tr><td>banner</td><td>Only for banner imps</td><td>A banner object ; required if this impression is offered as a banner ad opportunity (object)</td></tr><tr><td>instl</td><td>Only for instl imps</td><td>An interstitial object ; required if this impression is offered as an interstitial ad opportunity (object)</td></tr><tr><td>video</td><td>Only for video</td><td>A Video object; required if this impression is offered as a video ad opportunity (object)</td></tr><tr><td>secure</td><td>No; Recommended 1</td><td>Flag to indicate if the impression requires secure HTTPS URL creative assets and markup, where 0 = non-secure, 1 = secure. If omitted, the secure state is unknown, but non-secure HTTP support can be assumed, optional (integer)</td></tr><tr><td>el</td><td>No</td><td>Base64 Encoded Email (string)</td></tr><tr><td>ext</td><td>No</td><td>Placeholder for exchange-specific extensions</td></tr></tbody></table><p>  <a name=imp-banner></a></p><h3><a class=anchor aria-hidden=true id=impbanner></a><a href=#impbanner class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>imp.banner</h3><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>w</td><td>Yes</td><td>Width of the banner (integer)</td></tr><tr><td>h</td><td>Yes</td><td>Height of the banner (integer)</td></tr><tr><td>mimes</td><td>No</td><td>List of supported mime types (string array). We support: image/jpeg, image/jpg, image/png, image/png, image/gif, image/webp, video/mp4</td></tr><tr><td>ext</td><td>No</td><td>Placeholder for exchange-specific extensions (object)</td></tr></tbody></table><p> </p><p><a name=imp-banner-ext></a></p><h3><a class=anchor aria-hidden=true id=impbannerext></a><a href=#impbannerext class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>imp.banner.ext</h3><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>image_output</td><td>No</td><td>Indicates output format for image banners* (string)</td></tr><tr><td>video_output</td><td>No</td><td>Indicates output format for video banners* (string)</td></tr></tbody></table><p>* Defines format of <code>adm</code> field for the banner format. Options are <code>xml</code> or <code>html</code>. Default values is <code>xml</code> in case field not provided.</p><p> </p><p><a name=imp-full-page-interstitial></a></p><h3><a class=anchor aria-hidden=true id=impfull-page-interstitial></a><a href=#impfull-page-interstitial class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>imp.full-page-interstitial</h3><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>w</td><td>Yes</td><td>Width of the banner (integer)</td></tr><tr><td>h</td><td>Yes</td><td>Height of the banner (integer)</td></tr><tr><td>mimes</td><td>Yes</td><td>Mimes types - image/jpg, image/png, video/mp4 or image/webp</td></tr></tbody></table><p> </p><p><a name=imp-instl></a></p><h3><a class=anchor aria-hidden=true id=impinstl></a><a href=#impinstl class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>imp.instl</h3><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>instl</td><td>Yes</td><td>Flag specifying if ad is popunder (integer)</td></tr></tbody></table><p>  <a name=imp-native></a></p><h3><a class=anchor aria-hidden=true id=impnative-for-native-and-push-notification-ads></a><a href=#impnative-for-native-and-push-notification-ads class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>imp.native (for Native and Push Notification Ads)</h3><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>request</td><td>Yes</td><td>Request payload complying with the Native Ad Specification - a <strong>JSON encoded string</strong> of the Native Ads request including its <strong>native</strong> top level object (JSON object)</td></tr><tr><td>ver</td><td>No</td><td>Version of the Dynamic Native Ads API to which <strong>request</strong> complies (string)</td></tr></tbody></table><p>  <a name=imp-native-request></a></p><h3><a class=anchor aria-hidden=true id=impnativerequest></a><a href=#impnativerequest class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>imp.native.request</h3><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>ver</td><td>Yes</td><td>Version of the Native Markup version in use (string)</td></tr><tr><td>context</td><td>No</td><td>The context in which the ad appears. In this case it is <strong>1</strong> (<em>Content-centric context such as newsfeed, article, image gallery, video gallery, or similar</em>), optional (integer)</td></tr><tr><td>plcmttype</td><td>Yes</td><td>The design/format/layout of the ad unit being offered. Currently we support <strong>4</strong> (<em>Recommendation widget</em>) and <strong>500</strong> (<em>Push Notification</em>) (integer)</td></tr><tr><td>plcmtcnt</td><td>No</td><td>The number of identical placements in this Layout (integer)</td></tr><tr><td>assets</td><td>Yes</td><td>An array of <strong>Asset Objects</strong>. Any bid response must comply with the array of elements expressed in the bid request (array of JSON objects)</td></tr><tr><td>seq</td><td>No</td><td>0 for the first ad, 1 for the second ad, and so on. Note this would generally NOT be used in combination with plcmtcnt - either you are auctioning multiple identical placements (in which case plcmtcnt&gt;1, seq=0) or you are holding separate auctions for distinct items in the feed (in which case plcmtcnt=1, seq=&gt;=1)</td></tr></tbody></table><p>  <a name=imp-native-request-assets></a></p><h3><a class=anchor aria-hidden=true id=impnativerequestassets></a><a href=#impnativerequestassets class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>imp.native.request.assets</h3><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>Yes</td><td>Unique asset ID, assigned by exchange. Typically a counter for the array (integer) 1: Image asset ID, 2: Title asset ID, 3: Description asset ID</td></tr><tr><td>required</td><td>No</td><td>Set to <strong>1</strong> if asset is required or <strong>0</strong> if asset is optional (integer)</td></tr><tr><td>plcmtcnt</td><td>No</td><td>The number of identical placements in this Layout (integer)</td></tr><tr><td>img</td><td>Yes</td><td>Image object for image assets* (JSON object)</td></tr><tr><td>title</td><td>No</td><td>Title object for title assets* (JSON object)</td></tr><tr><td>data</td><td>No</td><td>Data object for brand name, description, ratings, prices etc.* (JSON object)</td></tr><tr><td>video</td><td>No</td><td>Video object for video assets. See the Video request object definition. Note that in-stream (ie preroll, etc) video ads are not part of Native. Native ads may contain a video as the ad creative itself(object).</td></tr></tbody></table><p>* Only one of the {img, title, data} objects should be present in each asset object</p><p>  <a name=imp-native-request-assets-img></a></p><h3><a class=anchor aria-hidden=true id=impnativerequestassetsimg></a><a href=#impnativerequestassetsimg class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>imp.native.request.assets.img</h3><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>type</td><td>No</td><td>Type ID of the image element supported by the publisher. We support: <strong>1</strong> (<em>Icon image</em>) (integer), <strong>3</strong> (<em>Large image preview for the ad</em>) (integer)</td></tr><tr><td>w</td><td>No</td><td>Width of the image in pixels, optional (integer)</td></tr><tr><td>h</td><td>No</td><td>Height of the image in pixels, optional (integer)</td></tr><tr><td>wmin</td><td>Yes</td><td>The minimum requested width of the image in pixels (integer)</td></tr><tr><td>hmin</td><td>Yes</td><td>The minimum requested height of the image in pixels (integer)</td></tr></tbody></table><p>*Push Notification icon dimensions: 192px x 192px</p><p> </p><p><a name=imp-native-request-assets-title></a></p><h3><a class=anchor aria-hidden=true id=impnativerequestassetstitle></a><a href=#impnativerequestassetstitle class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>imp.native.request.assets.title</h3><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>len</td><td>Yes</td><td>Maximum length of the text in the title element. (integer)</td></tr></tbody></table><p>  <a name=imp-native-request-assets-data></a></p><h3><a class=anchor aria-hidden=true id=impnativerequestassetsdata></a><a href=#impnativerequestassetsdata class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>imp.native.request.assets.data</h3><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>type</td><td>Yes</td><td>Type ID of the element supported by the publisher (integer). We support: <strong>1</strong> (<em>sponsored - Sponsored By message where response should contain the brand name of the sponsor</em>), <strong>2</strong> (<em>desc - Descriptive text associated with the product or service being advertised</em>)</td></tr><tr><td>len</td><td>No</td><td>Maximum length of the text in the element’s response (integer)</td></tr></tbody></table><p>  <a name=imp-native-request-assets-video></a></p><h3><a class=anchor aria-hidden=true id=impnativerequestassetsvideo></a><a href=#impnativerequestassetsvideo class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>imp.native.request.assets.video</h3><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>mimes</td><td>Yes</td><td>List of supported mime types (string array)</td></tr><tr><td>minduration</td><td>Yes</td><td>Minimum video ad duration in seconds(int).</td></tr><tr><td>maxduration</td><td>Yes</td><td>Maximum video ad duration in seconds(int).</td></tr><tr><td>protocols</td><td>Yes</td><td>List of supported video bid response protocols (int array)</td></tr><tr><td>linearity</td><td>Required for in-stream ads only.</td><td>Indicates if the impression must be linear, nonlinear, etc. (int)</td></tr><tr><td>boxingallowed</td><td>Required for in-stream ads only.</td><td>Indicates if letter-boxing of 4:3 content into a 16:9 window is allowed (int)</td></tr></tbody></table><p> </p><p><a name=imp-video></a></p><h3><a class=anchor aria-hidden=true id=impvideo></a><a href=#impvideo class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>imp.video</h3><table><thead><tr><th>Attribute</th><th>Description</th></tr></thead><tbody><tr><td>mimes</td><td>List of supported mime types (string array)</td></tr><tr><td>protocols</td><td>List of supported video bid response protocols (int array)</td></tr><tr><td>skip</td><td>Indicates if the player will allow the video to be skipped, where 0 = no, 1 = yes</td></tr><tr><td>skipafter</td><td>Number of seconds a video must play before skipping is enabled; only applicable if the ad is skippable</td></tr><tr><td>skipmin</td><td>Videos of total duration greater than this number of seconds can be skippable; only applicable if the ad is skippable</td></tr></tbody></table><p> </p><p><a name=imp-ext></a></p><h3><a class=anchor aria-hidden=true id=impext></a><a href=#impext class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>imp.ext</h3><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>video_cta</td><td>No</td><td>Indicates if CTAs should be provided*</td></tr></tbody></table><p>* When enabled, CTA should be provided as part of VAST Tag <a href=../../bid-response/open-rtb-publishers-response/index.html#in-stream-video-outstream-video-video-slider-xml>here</a>.</p><p> </p><p><a name=site></a></p><h2><a class=anchor aria-hidden=true id=site></a><a href=#site class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>site</h2><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>Recommended</td><td>Unique Site ID (string)</td></tr><tr><td>name</td><td>No<sup>*</sup></td><td>Site name (string)</td></tr><tr><td>domain</td><td>Recommended</td><td>Domain name of the site (string)</td></tr><tr><td>cat</td><td>No</td><td>IAB category ID (string array)</td></tr><tr><td>page</td><td>Recommended</td><td>Full URL of the page where the ad will be shown (string)</td></tr><tr><td>pagecat</td><td>No</td><td>IAB category ID (string array)</td></tr><tr><td>keywords</td><td>No</td><td>Keywords can be used to ensure ad zones get the right type of advertising. Keywords should be a string of comma-separated words</td></tr><tr><td>ext</td><td>No</td><td>Placeholder for exchange-specific extensions</td></tr></tbody></table><hr><p><strong>Note</strong>: Only one of the objects {site, app} should be present in each request.</p><p><sup>*</sup> Recommended when RTB Inventory is enabled.</p><hr><p>  <a name=site-ext></a></p><h3><a class=anchor aria-hidden=true id=siteext></a><a href=#siteext class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>site.ext</h3><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>exchangecat</td><td>No</td><td>Custom GatherStar category ID (integer)</td></tr><tr><td>idzone</td><td>No</td><td>Custom GatherStar Ad Zone ID (integer)</td></tr></tbody></table><p> </p><p><a name=app></a></p><h2><a class=anchor aria-hidden=true id=app></a><a href=#app class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>app</h2><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>Recommended</td><td>Unique App ID (string)</td></tr><tr><td>name</td><td>No<sup>*</sup></td><td>App name (string)</td></tr><tr><td>domain</td><td>Recommended</td><td>Domain name of the app (string)</td></tr><tr><td>cat</td><td>No</td><td>IAB category ID (string array)</td></tr><tr><td>pagecat</td><td>No</td><td>IAB category ID (string array)</td></tr><tr><td>keywords</td><td>No</td><td>Keywords can be used to ensure ad zones get the right type of advertising. Keywords should be a string of comma-separated words (string)</td></tr><tr><td>publisher</td><td>No</td><td>Details about the Publisher (object)</td></tr></tbody></table><hr><p><strong>Note</strong>: Only one of the objects {site, app} should be present in each request.</p><p><sup>*</sup> Recommended when RTB Inventory is enabled.</p><hr><p>  <a name=app-publisher></a></p><h3><a class=anchor aria-hidden=true id=apppublisher></a><a href=#apppublisher class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>app.publisher</h3><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>domain</td><td>Recommended</td><td>Highest level domain of the publisher (e.g., &quot;publisher.com&quot;) (string)</td></tr></tbody></table><p>  <a name=device></a></p><h2><a class=anchor aria-hidden=true id=device></a><a href=#device class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>device</h2><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>ua</td><td>Yes</td><td>Browser user agent (string)</td></tr><tr><td>sua</td><td>No</td><td>Structured user agent information, which can be used when a client supports User-Agent Client Hints (object)</td></tr><tr><td>geo</td><td>No</td><td>Location of the device assumed to be the user’s current location defined by a Geo object.</td></tr><tr><td>ip</td><td>Conditional*</td><td>IPv4 address of the user (string)</td></tr><tr><td>ipv6</td><td>Conditional*</td><td>IPv6 address of the user (string)</td></tr><tr><td>language</td><td>Recommended</td><td>Browser language using ISO-639-1-alpha-2 (string)</td></tr><tr><td>os</td><td>No</td><td>Operating System (string)</td></tr><tr><td>js</td><td>No</td><td>Support for JavaScript, where 0 = no, 1 = yes (integer)</td></tr><tr><td>ext</td><td>No</td><td>Placeholder for exchange-specific extensions to OpenRTB</td></tr></tbody></table><p>*Condition: Exactly one of ip or ipv6 must be included in the request (not both).</p><p>  <a name=device-geo></a></p><h3><a class=anchor aria-hidden=true id=devicegeo></a><a href=#devicegeo class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>device.geo</h3><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>country</td><td>No</td><td>Country ISO3</td></tr></tbody></table><p>  <a name=device-ext></a></p><h3><a class=anchor aria-hidden=true id=deviceext></a><a href=#deviceext class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>device.ext</h3><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>remote_addr</td><td>No</td><td>Main IP address of the user (string)</td></tr><tr><td>x_forwarded_for</td><td>No</td><td>X-FORWARDED-FOR IP address of the user or empty if not set (string)</td></tr></tbody></table><p> </p><p><a name=device-sua></a></p><h3><a class=anchor aria-hidden=true id=devicesua></a><a href=#devicesua class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>device.sua</h3><p>Structured User Agent information. Once provided <code>device.sua</code> is considered the more accurate representation of the device attributes.</p><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>browsers</td><td>Recommended</td><td>Implementers should send brands and versions derived from the Sec-CH-UA-Full-Version-List header. (Array of <code>BrandVersion</code> objects)</td></tr><tr><td>platform</td><td>Recommended</td><td>Implementers should send a brand derived from the Sec-CH-UA-Platform header, and version derived from the Sec-CH-UA-Platform-Version header. (<code>BrandVersion</code> Object)</td></tr><tr><td>mobile</td><td>Recommended</td><td>Implementers should derive this value from the Sec-CH-UA-Mobile header. (integer)</td></tr><tr><td>architecture</td><td>Recommended</td><td>Implementers should retrieve this value from the Sec-CH-UA-Arch header. (string)</td></tr><tr><td>bitness</td><td>Recommended</td><td>Implementers should retrieve this value from the Sec-CH-UA-Bitness header. (string)</td></tr><tr><td>model</td><td>Recommended</td><td>Implementers should retrieve this value from the Sec-CH-UA-Model header. (string)</td></tr><tr><td>source</td><td>Recommended</td><td>The source of data used to create this object, <a href="https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM v1.0 FINAL.md#list--user-agent-source-">List: User-Agent Source</a> in AdCOM 1.0 (integer; default 0)</td></tr></tbody></table><p> </p><p><a name=device-sua-brandversion></a></p><h4><a class=anchor aria-hidden=true id=devicesuabrowsersbrandversion--devicesuaplatformbrandversion></a><a href=#devicesuabrowsersbrandversion--devicesuaplatformbrandversion class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>device.sua.browsers.BrandVersion | device.sua.platform.BrandVersion</h4><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>brand</td><td>Required</td><td>The value may be sourced from the User-Agent Client Hints headers, representing either the user agent brand (from the Sec-CH-UA-Full-Version header) or the platform brand (from the Sec-CH-UA-Platform header). (string)</td></tr><tr><td>version</td><td>Recommended</td><td>A sequence of version components, in descending hierarchical order [major, minor, micro, …] (array of string)</td></tr></tbody></table><p> </p><p><a name=user></a></p><h2><a class=anchor aria-hidden=true id=user></a><a href=#user class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>user</h2><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>Yes*</td><td>Unique user ID (string)</td></tr></tbody></table><hr><p><strong>Note</strong>: If you cannot generate a user ID, you can leave it empty (&quot;&quot;). The request will get a response as long as &quot;user&quot; object is included in the request.</p><hr><p> </p><p><a name=ext></a></p><h2><a class=anchor aria-hidden=true id=ext></a><a href=#ext class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>ext</h2><table><thead><tr><th>Attribute</th><th>Required?</th><th>Description</th></tr></thead><tbody><tr><td>sub</td><td>No</td><td>The Sub ID. This should be a number between six and ten digits: Do not use zeroes at the beginning of Sub IDs.</td></tr></tbody></table><h2><a class=anchor aria-hidden=true id=examples></a><a href=#examples class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Examples</h2><h3><a class=anchor aria-hidden=true id=banner></a><a href=#banner class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Banner</h3><pre><code class="css hljs language-json">{
+  <span class=hljs-attr>"id"</span>: <span class=hljs-string>"d4b5c697-41f3-4c1c-a3d5-5fd01b5ef2aa"</span>,
+  <span class=hljs-attr>"at"</span>: <span class=hljs-number>1</span>,
+  <span class=hljs-attr>"imp"</span>: [
+    {
+      <span class=hljs-attr>"id"</span>: <span class=hljs-string>"974090632"</span>,
+      <span class=hljs-attr>"banner"</span>: {
+        <span class=hljs-attr>"w"</span>: <span class=hljs-number>300</span>,
+        <span class=hljs-attr>"h"</span>: <span class=hljs-number>250</span>,
+        <span class=hljs-attr>"mimes"</span>: [
+          <span class=hljs-string>"image/jpg"</span>,
+          <span class=hljs-string>"image/png"</span>,
+          <span class=hljs-string>"video/mp4"</span>,
+          <span class=hljs-string>"image/webp"</span>
+        ],
+        <span class=hljs-attr>"ext"</span>: {
+          <span class=hljs-attr>"image_output"</span>: <span class=hljs-string>"xml"</span>,
+          <span class=hljs-attr>"video_output"</span>: <span class=hljs-string>"xml"</span>
+        }
+      }
+    }
+  ],
+  <span class=hljs-attr>"site"</span>: {
+    <span class=hljs-attr>"id"</span>: <span class=hljs-string>"12345"</span>,
+    <span class=hljs-attr>"domain"</span>: <span class=hljs-string>"sitedomain.com"</span>,
+    <span class=hljs-attr>"cat"</span>: [
+      <span class=hljs-string>"IAB25-3"</span>
+    ],
+    <span class=hljs-attr>"page"</span>: <span class=hljs-string>"https://sitedomain.com/page"</span>,
+    <span class=hljs-attr>"keywords"</span>: <span class=hljs-string>"lifestyle, humour"</span>,
+    <span class=hljs-attr>"pagecat"</span>: [
+      <span class=hljs-string>"IAB25-3"</span>
+    ]
+  },
+  <span class=hljs-attr>"device"</span>: {
+    <span class=hljs-attr>"ua"</span>: <span class=hljs-string>"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36"</span>,
+    <span class=hljs-attr>"sua"</span>: {
+      <span class=hljs-attr>"architecture"</span>: <span class=hljs-string>"x86"</span>,
+      <span class=hljs-attr>"bitness"</span>: <span class=hljs-string>"64"</span>,
+      <span class=hljs-attr>"model"</span>: <span class=hljs-string>"Windows"</span>,
+      <span class=hljs-attr>"mobile"</span>: <span class=hljs-number>0</span>,
+      <span class=hljs-attr>"source"</span>: <span class=hljs-number>2</span>,
+      <span class=hljs-attr>"platform"</span>: {
+        <span class=hljs-attr>"brand"</span>: <span class=hljs-string>"Windows"</span>,
+        <span class=hljs-attr>"version"</span>: [
+          <span class=hljs-string>"10"</span>,
+          <span class=hljs-string>"0"</span>,
+          <span class=hljs-string>"0"</span>
+        ]
+      },
+      <span class=hljs-attr>"browsers"</span>: [
+        {
+          <span class=hljs-attr>"brand"</span>: <span class=hljs-string>"Chromium"</span>,
+          <span class=hljs-attr>"version"</span>: [
+            <span class=hljs-string>"136"</span>,
+            <span class=hljs-string>"0"</span>,
+            <span class=hljs-string>"7103"</span>,
+            <span class=hljs-string>"93"</span>
+          ]
+        },
+        {
+          <span class=hljs-attr>"brand"</span>: <span class=hljs-string>"Microsoft Edge"</span>,
+          <span class=hljs-attr>"version"</span>: [
+            <span class=hljs-string>"136"</span>,
+            <span class=hljs-string>"0"</span>,
+            <span class=hljs-string>"3240"</span>,
+            <span class=hljs-string>"64"</span>
+          ]
+        },
+        {
+          <span class=hljs-attr>"brand"</span>: <span class=hljs-string>"Not.A\/Brand"</span>,
+          <span class=hljs-attr>"version"</span>: [
+            <span class=hljs-string>"99"</span>,
+            <span class=hljs-string>"0"</span>,
+            <span class=hljs-string>"0"</span>,
+            <span class=hljs-string>"0"</span>
+          ]
+        }
+      ]
+    },
+    <span class=hljs-attr>"ip"</span>: <span class=hljs-string>"131.34.123.159"</span>,
+    <span class=hljs-attr>"geo"</span>: {
+      <span class=hljs-attr>"country"</span>: <span class=hljs-string>"IRL"</span>
+    },
+    <span class=hljs-attr>"language"</span>: <span class=hljs-string>"en"</span>,
+    <span class=hljs-attr>"os"</span>: <span class=hljs-string>"Linux &amp; UNIX"</span>,
+    <span class=hljs-attr>"js"</span>: <span class=hljs-number>0</span>,
+    <span class=hljs-attr>"ext"</span>: {
+      <span class=hljs-attr>"remote_addr"</span>: <span class=hljs-string>"131.34.123.159"</span>,
+      <span class=hljs-attr>"x_forwarded_for"</span>: <span class=hljs-string>""</span>,
+      <span class=hljs-attr>"accept_language"</span>: <span class=hljs-string>"en-GB;q=0.8,pt-PT;q=0.6,en;q=0.4,en-US;q=0.2,de;q=0.2,es;q=0.2,fr;q=0.2"</span>
+    }
+  },
+  <span class=hljs-attr>"user"</span>: {
+    <span class=hljs-attr>"id"</span>: <span class=hljs-string>"57592f333f8983.043587162282415065"</span>
+  },
+  <span class=hljs-attr>"ext"</span>: {
+    <span class=hljs-attr>"sub"</span>: <span class=hljs-number>1221</span>
+  }
+}
+</code></pre><p> </p><h4><a class=anchor aria-hidden=true id=banner-bid-request-structure></a><a href=#banner-bid-request-structure class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Banner Bid Request Structure</h4><ul><li><a href=#imp>imp</a><ul><li><a href=#imp-banner>imp.banner</a></li></ul></li><li><a href=#site>site</a><ul><li><a href=#site-ext>site.ext</a></li></ul></li><li><a href=#device>device</a><ul><li><a href=#device-geo>device.geo</a></li><li><a href=#device-ext>device.ext</a></li></ul></li><li><a href=#user>user</a></li></ul><p> </p><h3><a class=anchor aria-hidden=true id=direct-links></a><a href=#direct-links class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Direct Links</h3><h4><a class=anchor aria-hidden=true id=json></a><a href=#json class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>JSON</h4><pre><code class="css hljs language-json">{
+    <span class=hljs-attr>"id"</span>: <span class=hljs-string>"d4b5c697-41f3-4c1c-a3d5-5fd01b5ef2aa"</span>,
+    <span class=hljs-attr>"imp"</span>: [
+        {
+            <span class=hljs-attr>"id"</span>: <span class=hljs-string>"974090632"</span>,
+            <span class=hljs-attr>"instl"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"el"</span>: <span class=hljs-string>"dGVzdGVAZW1haWwuY29t"</span>,
+            <span class=hljs-attr>"bidfloor"</span>: <span class=hljs-number>0.035</span>,
+            <span class=hljs-attr>"bidfloorcur"</span>: <span class=hljs-string>"EUR"</span>
+        }
+    ],
+    <span class=hljs-attr>"site"</span>: {
+        <span class=hljs-attr>"id"</span>: <span class=hljs-string>"12345"</span>,
+        <span class=hljs-attr>"domain"</span>: <span class=hljs-string>"sitedomain.com"</span>,
+        <span class=hljs-attr>"cat"</span>: [<span class=hljs-string>"IAB25-3"</span>],
+        <span class=hljs-attr>"page"</span>: <span class=hljs-string>"https://sitedomain.com/page"</span>,
+        <span class=hljs-attr>"keywords"</span>: <span class=hljs-string>"lifestyle, humour"</span>,
+        <span class=hljs-attr>"pagecat"</span>: [<span class=hljs-string>"IAB25-3"</span>],
+        <span class=hljs-attr>"ext"</span>: {
+            <span class=hljs-attr>"exchangecat"</span>: <span class=hljs-number>508</span>,
+            <span class=hljs-attr>"idzone"</span>: <span class=hljs-number>445566</span>
+        }
+    },
+    <span class=hljs-attr>"device"</span>: {
+        <span class=hljs-attr>"ua"</span>: <span class=hljs-string>"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36"</span>,
+        <span class=hljs-attr>"ip"</span>: <span class=hljs-string>"192.168.1.70"</span>,
+        <span class=hljs-attr>"geo"</span>: {
+            <span class=hljs-attr>"country"</span>: <span class=hljs-string>"PRT"</span>
+        },
+        <span class=hljs-attr>"language"</span>: <span class=hljs-string>"en"</span>,
+        <span class=hljs-attr>"os"</span>: <span class=hljs-string>"Linux &amp; UNIX"</span>,
+        <span class=hljs-attr>"js"</span>: <span class=hljs-number>0</span>,
+        <span class=hljs-attr>"ext"</span>: {
+            <span class=hljs-attr>"remote_addr"</span>: <span class=hljs-string>"192.168.1.70"</span>,
+            <span class=hljs-attr>"x_forwarded_for"</span>: <span class=hljs-string>"192.168.1.70"</span>
+        }
+    },
+    <span class=hljs-attr>"user"</span>: {
+        <span class=hljs-attr>"id"</span>: <span class=hljs-string>"57592f333f8983.043587162282415065"</span>
+    }, 
+    <span class=hljs-attr>"ext"</span>: {
+        <span class=hljs-attr>"sub"</span>: <span class=hljs-number>1221</span>
+    }
+}
+</code></pre><p> </p><h4><a class=anchor aria-hidden=true id=direct-links-bid-request-structure></a><a href=#direct-links-bid-request-structure class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Direct Links Bid Request Structure</h4><ul><li><a href=#imp>imp</a><ul><li><a href=#imp-instl>imp.instl</a></li></ul></li><li><a href=#site>site</a><ul><li><a href=#site-ext>site.ext</a></li></ul></li><li><a href=#device>device</a><ul><li><a href=#device-geo>device.geo</a></li><li><a href=#device-ext>device.ext</a></li></ul></li><li><a href=#user>user</a></li></ul><p> </p><h3><a class=anchor aria-hidden=true id=email-clicks></a><a href=#email-clicks class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Email Clicks</h3><h4><a class=anchor aria-hidden=true id=json-1></a><a href=#json-1 class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>JSON</h4><pre><code class="css hljs language-json">{
+    <span class=hljs-attr>"id"</span>: <span class=hljs-string>"d4b5c697-41f3-4c1c-a3d5-5fd01b5ef2aa"</span>,
+    <span class=hljs-attr>"imp"</span>: [
+        {
+            <span class=hljs-attr>"id"</span>: <span class=hljs-string>"974090632"</span>,
+            <span class=hljs-attr>"instl"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"el"</span>: <span class=hljs-string>"dGVzdGVAZW1haWwuY29t"</span>,
+            <span class=hljs-attr>"bidfloor"</span>: <span class=hljs-number>0.035</span>,
+            <span class=hljs-attr>"bidfloorcur"</span>: <span class=hljs-string>"EUR"</span>
+        }
+    ],
+    <span class=hljs-attr>"site"</span>: {
+        <span class=hljs-attr>"id"</span>: <span class=hljs-string>"12345"</span>,
+        <span class=hljs-attr>"domain"</span>: <span class=hljs-string>"sitedomain.com"</span>,
+        <span class=hljs-attr>"cat"</span>: [<span class=hljs-string>"IAB25-3"</span>],
+        <span class=hljs-attr>"page"</span>: <span class=hljs-string>"https://sitedomain.com/page"</span>,
+        <span class=hljs-attr>"keywords"</span>: <span class=hljs-string>"lifestyle, humour"</span>,
+        <span class=hljs-attr>"pagecat"</span>: [<span class=hljs-string>"IAB25-3"</span>],
+        <span class=hljs-attr>"ext"</span>: {
+            <span class=hljs-attr>"exchangecat"</span>: <span class=hljs-number>508</span>,
+            <span class=hljs-attr>"idzone"</span>: <span class=hljs-number>445566</span>
+        }
+    },
+    <span class=hljs-attr>"device"</span>: {
+        <span class=hljs-attr>"ua"</span>: <span class=hljs-string>"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36"</span>,
+        <span class=hljs-attr>"ip"</span>: <span class=hljs-string>"192.168.1.70"</span>,
+        <span class=hljs-attr>"geo"</span>: {
+            <span class=hljs-attr>"country"</span>: <span class=hljs-string>"PRT"</span>
+        },
+        <span class=hljs-attr>"language"</span>: <span class=hljs-string>"en"</span>,
+        <span class=hljs-attr>"os"</span>: <span class=hljs-string>"Linux &amp; UNIX"</span>,
+        <span class=hljs-attr>"js"</span>: <span class=hljs-number>0</span>,
+        <span class=hljs-attr>"ext"</span>: {
+            <span class=hljs-attr>"remote_addr"</span>: <span class=hljs-string>"192.168.1.70"</span>,
+            <span class=hljs-attr>"x_forwarded_for"</span>: <span class=hljs-string>"192.168.1.70"</span>
+        }
+    },
+    <span class=hljs-attr>"user"</span>: {
+        <span class=hljs-attr>"id"</span>: <span class=hljs-string>"57592f333f8983.043587162282415065"</span>
+    }, 
+    <span class=hljs-attr>"ext"</span>: {
+        <span class=hljs-attr>"sub"</span>: <span class=hljs-number>1221</span>
+    }
+}
+</code></pre><p> </p><h4><a class=anchor aria-hidden=true id=email-clicks-bid-request-structure></a><a href=#email-clicks-bid-request-structure class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Email Clicks Bid Request Structure</h4><ul><li><a href=#imp>imp</a><ul><li><a href=#imp-instl>imp.instl</a></li></ul></li><li><a href=#site>site</a><ul><li><a href=#site-ext>site.ext</a></li></ul></li><li><a href=#device>device</a><ul><li><a href=#device-geo>device.geo</a></li><li><a href=#device-ext>device.ext</a></li></ul></li><li><a href=#user>user</a></li></ul><p> </p><h3><a class=anchor aria-hidden=true id=in-stream-video-outstream-video-video-slider></a><a href=#in-stream-video-outstream-video-video-slider class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>In-Stream Video, Outstream Video, Video Slider</h3><pre><code class="css hljs language-json">{
+    <span class=hljs-attr>"id"</span>: <span class=hljs-string>"d4b5c697-41f3-4c1c-a3d5-5fd01b5ef2aa"</span>,
+    <span class=hljs-attr>"imp"</span>: [
+        {
+            <span class=hljs-attr>"id"</span>: <span class=hljs-string>"974090632"</span>,
+            <span class=hljs-attr>"video"</span>: {
+                <span class=hljs-attr>"mimes"</span>: [<span class=hljs-string>"video/mp4"</span>],
+                <span class=hljs-attr>"protocols"</span>: [
+                    <span class=hljs-number>3</span>,
+                    <span class=hljs-number>6</span>
+                ]
+            },
+            <span class=hljs-attr>"ext"</span>: {
+                <span class=hljs-attr>"video_cta"</span>: <span class=hljs-number>0</span>
+            }
+        }
+    ],
+    <span class=hljs-attr>"site"</span>: {
+        <span class=hljs-attr>"id"</span>: <span class=hljs-string>"12345"</span>,
+        <span class=hljs-attr>"domain"</span>: <span class=hljs-string>"sitedomain.com"</span>,
+        <span class=hljs-attr>"cat"</span>: [<span class=hljs-string>"IAB25-3"</span>],
+        <span class=hljs-attr>"page"</span>: <span class=hljs-string>"https://sitedomain.com/page"</span>,
+        <span class=hljs-attr>"keywords"</span>: <span class=hljs-string>"lifestyle, humour"</span>,
+        <span class=hljs-attr>"pagecat"</span>: [<span class=hljs-string>"IAB25-3"</span>],
+        <span class=hljs-attr>"ext"</span>: {
+            <span class=hljs-attr>"exchangecat"</span>: <span class=hljs-number>508</span>,
+            <span class=hljs-attr>"idzone"</span>: <span class=hljs-number>445566</span>
+        }
+    },
+    <span class=hljs-attr>"device"</span>: {
+        <span class=hljs-attr>"ua"</span>: <span class=hljs-string>"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36"</span>,
+        <span class=hljs-attr>"ip"</span>: <span class=hljs-string>"192.168.1.70"</span>,
+        <span class=hljs-attr>"geo"</span>: {
+            <span class=hljs-attr>"country"</span>: <span class=hljs-string>"PRT"</span>
+        },
+        <span class=hljs-attr>"language"</span>: <span class=hljs-string>"en"</span>,
+        <span class=hljs-attr>"os"</span>: <span class=hljs-string>"Linux &amp; UNIX"</span>,
+        <span class=hljs-attr>"js"</span>: <span class=hljs-number>0</span>,
+        <span class=hljs-attr>"ext"</span>: {
+            <span class=hljs-attr>"remote_addr"</span>: <span class=hljs-string>"192.168.1.70"</span>,
+            <span class=hljs-attr>"x_forwarded_for"</span>: <span class=hljs-string>"192.168.1.70"</span>
+        }
+    },
+    <span class=hljs-attr>"user"</span>: {
+        <span class=hljs-attr>"id"</span>: <span class=hljs-string>"57592f333f8983.043587162282415065"</span>
+    }, 
+    <span class=hljs-attr>"ext"</span>: {
+        <span class=hljs-attr>"sub"</span>: <span class=hljs-number>1221</span>
+    }
+}
+</code></pre><p> </p><h4><a class=anchor aria-hidden=true id=in-stream-video-outstream-video-video-slider-bid-request-structure></a><a href=#in-stream-video-outstream-video-video-slider-bid-request-structure class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>In-Stream Video, Outstream Video, Video Slider Bid Request Structure</h4><ul><li><a href=#imp>imp</a><ul><li><a href=#imp-instl>imp.instl</a></li></ul></li><li><a href=#site>site</a><ul><li><a href=#site-ext>site.ext</a></li></ul></li><li><a href=#device>device</a><ul><li><a href=#device-geo>device.geo</a></li><li><a href=#device-ext>device.ext</a></li></ul></li><li><a href=#user>user</a></li></ul><p> </p><h3><a class=anchor aria-hidden=true id=native></a><a href=#native class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Native</h3><pre><code class="css hljs language-json">{
+  <span class=hljs-attr>"id"</span>: <span class=hljs-string>"7a452540-c8c9-43ca-9d30-ab9d8bfd17a4"</span>,
+  <span class=hljs-attr>"at"</span>:<span class=hljs-number>1</span>,
+  <span class=hljs-attr>"imp"</span>: [
+    {
+      <span class=hljs-attr>"id"</span>: <span class=hljs-string>"2d099176-9feb-44e9-85f9-f385b34123a1"</span>,
+      <span class=hljs-attr>"native"</span>: {
+        <span class=hljs-attr>"request"</span>: <span class=hljs-string>"{\"native\":{\"ver\":\"1.2\"\n,\"context\":1\n,\"contextsubtype\":10\n,\"plcmttype\":4\n,\"plcmtcnt\":4\n,\"assets\":[{\"id\":1,\"required\":1,\"title\":{\"len\":124}},{\"id\":2,\"data\":{\"type\":1,\"len\":50}},{\"id\":3,\"required\":1,\"img\":{\"type\":3,\"wmin\":150,\"hmin\":150}}]\n}}"</span>,
+        <span class=hljs-attr>"ver"</span>: <span class=hljs-string>"1.2"</span>
+      },
+      <span class=hljs-attr>"tagid"</span>: <span class=hljs-string>"2812"</span>,
+      <span class=hljs-attr>"bidfloor"</span>: <span class=hljs-number>0.035</span>,
+      <span class=hljs-attr>"secure"</span>: <span class=hljs-number>1</span>
+    }
+  ],
+  <span class=hljs-attr>"site"</span>: {
+    <span class=hljs-attr>"id"</span>: <span class=hljs-string>"2812"</span>,
+    <span class=hljs-attr>"domain"</span>: <span class=hljs-string>"example.com"</span>,
+    <span class=hljs-attr>"keywords"</span>: <span class=hljs-string>"lifestyle, humour"</span>,
+    <span class=hljs-attr>"page"</span>: <span class=hljs-string>"https://example.com/"</span>,
+    <span class=hljs-attr>"mobile"</span>: <span class=hljs-number>1</span>
+  },
+  <span class=hljs-attr>"device"</span>: {
+    <span class=hljs-attr>"ua"</span>: <span class=hljs-string>"Mozilla/5.0 (iPhone; CPU iPhone OS 11_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15G77 Version/11.4.1 Safari/604.1 AlohaBrowser/2.10.0b17"</span>,
+    <span class=hljs-attr>"ip"</span>: <span class=hljs-string>"88.208.2.198"</span>,
+    <span class=hljs-attr>"js"</span>: <span class=hljs-number>1</span>,
+    <span class=hljs-attr>"language"</span>: <span class=hljs-string>"en"</span>
+  },
+  <span class=hljs-attr>"user"</span>: {
+    <span class=hljs-attr>"id"</span>: <span class=hljs-string>"37d1951a-7184-4b7f-b227-5571a1ea7467"</span>
+  }
+}
+</code></pre><h4><a class=anchor aria-hidden=true id=native-bid-request-structure></a><a href=#native-bid-request-structure class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Native Bid Request Structure</h4><ul><li><a href=#imp>imp</a><ul><li><a href=#imp-native>imp.native</a><ul><li><a href=#imp-native-request>imp.native.request</a><ul><li><a href=#imp-native-request-assets>imp.native.request.assets</a><ul><li><a href=#imp-native-request-assets-img>imp.native.request.assets.img</a></li><li><a href=#imp-native-request-assets-title>imp.native.request.assets.title</a></li><li><a href=#imp-native-request-assets-data>imp.native.request.assets.data</a></li><li><a href=#imp-native-request-assets-video>imp.native.request.assets.video</a></li></ul></li></ul></li></ul></li></ul></li><li><a href=#site>site</a></li><li><a href=#site-ext>site.ext</a></li><li><a href=#device>device</a><ul><li><a href=#device-geo>device.geo</a></li><li><a href=#device-ext>device.ext</a></li></ul></li><li><a href=#user>user</a></li></ul><p> </p><h3><a class=anchor aria-hidden=true id=popunder></a><a href=#popunder class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Popunder</h3><pre><code class="css hljs language-json">{
+    <span class=hljs-attr>"id"</span>: <span class=hljs-string>"d4b5c697-41f3-4c1c-a3d5-5fd01b5ef2aa"</span>,
+    <span class=hljs-attr>"at"</span>:<span class=hljs-number>1</span>,
+    <span class=hljs-attr>"imp"</span>: [
+        {
+            <span class=hljs-attr>"id"</span>: <span class=hljs-string>"974090632"</span>,
+            <span class=hljs-attr>"instl"</span>: <span class=hljs-number>1</span>
+        }
+    ],
+    <span class=hljs-attr>"site"</span>: {
+        <span class=hljs-attr>"id"</span>: <span class=hljs-string>"12345"</span>,
+        <span class=hljs-attr>"domain"</span>: <span class=hljs-string>"sitedomain.com"</span>,
+        <span class=hljs-attr>"cat"</span>: [<span class=hljs-string>"IAB25-3"</span>],
+        <span class=hljs-attr>"page"</span>: <span class=hljs-string>"https://sitedomain.com/page"</span>,
+        <span class=hljs-attr>"keywords"</span>: <span class=hljs-string>"lifestyle, humour"</span>,
+        <span class=hljs-attr>"pagecat"</span>: [<span class=hljs-string>"IAB25-3"</span>]
+    },
+    <span class=hljs-attr>"device"</span>: {
+        <span class=hljs-attr>"ua"</span>: <span class=hljs-string>"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36"</span>,
+        <span class=hljs-attr>"ip"</span>: <span class=hljs-string>"120.52.73.97"</span>,
+        <span class=hljs-attr>"geo"</span>: {
+            <span class=hljs-attr>"country"</span>: <span class=hljs-string>"IRL"</span>
+        },
+        <span class=hljs-attr>"language"</span>: <span class=hljs-string>"en"</span>,
+        <span class=hljs-attr>"os"</span>: <span class=hljs-string>"Linux &amp; UNIX"</span>,
+        <span class=hljs-attr>"js"</span>: <span class=hljs-number>0</span>,
+        <span class=hljs-attr>"ext"</span>: {
+            <span class=hljs-attr>"remote_addr"</span>: <span class=hljs-string>"131.34.123.159"</span>,
+            <span class=hljs-attr>"x_forwarded_for"</span>: <span class=hljs-string>"120.52.73.97"</span>
+        }
+    },
+    <span class=hljs-attr>"user"</span>: {
+        <span class=hljs-attr>"id"</span>: <span class=hljs-string>"57592f333f8983.043587162282415065"</span>
+    },
+    <span class=hljs-attr>"ext"</span>: {
+        <span class=hljs-attr>"sub"</span>: <span class=hljs-number>1221</span>
+    }
+}
+</code></pre><p> </p><h4><a class=anchor aria-hidden=true id=popunder-bid-request-structure></a><a href=#popunder-bid-request-structure class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Popunder Bid Request Structure</h4><ul><li><a href=#imp>imp</a><ul><li><a href=#imp-instl>imp.instl</a></li></ul></li><li><a href=#site>site</a><ul><li><a href=#site-ext>site.ext</a></li></ul></li><li><a href=#device>device</a><ul><li><a href=#device-geo>device.geo</a></li><li><a href=#device-ext>device.ext</a></li></ul></li><li><a href=#user>user</a></li></ul><p> </p><h3><a class=anchor aria-hidden=true id=push-notifications---720-x-480></a><a href=#push-notifications---720-x-480 class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Push Notifications - 720 x 480</h3><pre><code class="css hljs language-json">{
+    <span class=hljs-attr>"id"</span>: <span class=hljs-string>"d4b5c697-41f3-4c1c-a3d5-5fd01b5ef2aa"</span>,
+    <span class=hljs-attr>"imp"</span>: [
+        {
+            <span class=hljs-attr>"id"</span>: <span class=hljs-string>"90180978"</span>,
+            <span class=hljs-attr>"native"</span>: {
+                <span class=hljs-attr>"request"</span>:<span class=hljs-string>"{\"native\":{\"ver\":\"1.2\",\"plcmttype\":500,\"plcmtcnt\":1,\"assets\":[{\"id\":1,\"required\":1,\"img\":{\"type\":1,\"w\":720,\"h\":480,\"wmin\":720,\"hmin\":480}},{\"id\":2,\"required\":1,\"title\":{\"len\":60}},{\"id\":3,\"required\":1,\"data\":{\"type\":2,\"len\":110}}]}}"</span>,
+                <span class=hljs-attr>"ver"</span>: <span class=hljs-string>"1.2"</span>
+            }
+        }
+    ],
+    <span class=hljs-attr>"site"</span>: {
+        <span class=hljs-attr>"id"</span>: <span class=hljs-string>"12345"</span>,
+        <span class=hljs-attr>"domain"</span>: <span class=hljs-string>"sitedomain.com"</span>,
+        <span class=hljs-attr>"cat"</span>: [<span class=hljs-string>"IAB25-3"</span>],
+        <span class=hljs-attr>"page"</span>: <span class=hljs-string>"https://sitedomain.com/page"</span>, 
+        <span class=hljs-attr>"keywords"</span>: <span class=hljs-string>"lifestyle, humour"</span>,
+        <span class=hljs-attr>"pagecat"</span>: [<span class=hljs-string>"IAB25-3"</span>]
+    },
+    <span class=hljs-attr>"device"</span>: {
+        <span class=hljs-attr>"ua"</span>: <span class=hljs-string>"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36"</span>,
+        <span class=hljs-attr>"ip"</span>: <span class=hljs-string>"131.34.123.159"</span>,
+        <span class=hljs-attr>"geo"</span>: {
+            <span class=hljs-attr>"country"</span>: <span class=hljs-string>"IRL"</span>
+        },
+        <span class=hljs-attr>"language"</span>: <span class=hljs-string>"en"</span>,
+        <span class=hljs-attr>"os"</span>: <span class=hljs-string>"Linux &amp; UNIX"</span>,
+        <span class=hljs-attr>"js"</span>: <span class=hljs-number>0</span>,
+        <span class=hljs-attr>"ext"</span>: {
+            <span class=hljs-attr>"remote_addr"</span>: <span class=hljs-string>"131.34.123.159"</span>,
+            <span class=hljs-attr>"x_forwarded_for"</span>: <span class=hljs-string>""</span>,
+            <span class=hljs-attr>"accept_language"</span>: <span class=hljs-string>"en-GB;q=0.8,pt-PT;q=0.6,en;q=0.4,en-US;q=0.2,de;q=0.2,es;q=0.2,fr;q=0.2"</span>
+        }
+    },
+    <span class=hljs-attr>"user"</span>: {
+        <span class=hljs-attr>"id"</span>: <span class=hljs-string>"57592f333f8983.043587162282415065"</span>
+    },
+    <span class=hljs-attr>"ext"</span>: {
+        <span class=hljs-attr>"sub"</span>: <span class=hljs-number>1221</span>
+    }
+}
+</code></pre><h4><a class=anchor aria-hidden=true id=push-notifications---720-x-480-bid-request-structure></a><a href=#push-notifications---720-x-480-bid-request-structure class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Push Notifications - 720 x 480 Bid Request Structure</h4><ul><li><a href=#imp>imp</a><ul><li><a href=#imp-native>imp.native</a><ul><li><a href=#imp-native-request>imp.native.request</a><ul><li><a href=#imp-native-request-assets>imp.native.request.assets</a><ul><li><a href=#imp-native-request-assets-img>imp.native.request.assets.img</a></li><li><a href=#imp-native-request-assets-title>imp.native.request.assets.title</a></li><li><a href=#imp-native-request-assets-data>imp.native.request.assets.data</a></li><li><a href=#imp-native-request-assets-video>imp.native.request.assets.video</a></li></ul></li></ul></li></ul></li></ul></li><li><a href=#site>site</a><ul><li><a href=#site-ext>site.ext</a></li></ul></li><li><a href=#device>device</a><ul><li><a href=#device-geo>device.geo</a></li><li><a href=#device-ext>device.ext</a></li></ul></li><li><a href=#user>user</a></li></ul><p> </p><p> </p><h3><a class=anchor aria-hidden=true id=push-notifications---192-x-192></a><a href=#push-notifications---192-x-192 class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Push Notifications - 192 x 192</h3><pre><code class="css hljs language-json">{
+    <span class=hljs-attr>"id"</span>: <span class=hljs-string>"d4b5c697-41f3-4c1c-a3d5-5fd01b5ef2aa"</span>,
+    <span class=hljs-attr>"at"</span>:<span class=hljs-number>1</span>,
+    <span class=hljs-attr>"imp"</span>: [
+        {
+            <span class=hljs-attr>"id"</span>: <span class=hljs-string>"90180978"</span>,
+            <span class=hljs-attr>"native"</span>: {
+                <span class=hljs-attr>"request"</span>:<span class=hljs-string>"{\"native\":{\"ver\":\"1.2\",\"plcmttype\":500,\"plcmtcnt\":1,\"assets\":[{\"id\":1,\"required\":1,\"img\":{\"type\":1,\"w\":192,\"h\":192,\"wmin\":192,\"hmin\":192}},{\"id\":2,\"required\":1,\"title\":{\"len\":60}},{\"id\":3,\"required\":1,\"data\":{\"type\":2,\"len\":110}}]}}"</span>,
+                <span class=hljs-attr>"ver"</span>: <span class=hljs-string>"1.2"</span>
+            }
+        }
+    ],
+    <span class=hljs-attr>"site"</span>: {
+        <span class=hljs-attr>"id"</span>: <span class=hljs-string>"12345"</span>,
+        <span class=hljs-attr>"domain"</span>: <span class=hljs-string>"sitedomain.com"</span>,
+        <span class=hljs-attr>"cat"</span>: [<span class=hljs-string>"IAB25-3"</span>],
+        <span class=hljs-attr>"page"</span>: <span class=hljs-string>"https://sitedomain.com/page"</span>, 
+        <span class=hljs-attr>"keywords"</span>: <span class=hljs-string>"lifestyle, humour"</span>,
+        <span class=hljs-attr>"pagecat"</span>: [<span class=hljs-string>"IAB25-3"</span>]
+    },
+    <span class=hljs-attr>"device"</span>: {
+        <span class=hljs-attr>"ua"</span>: <span class=hljs-string>"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36"</span>,
+        <span class=hljs-attr>"ip"</span>: <span class=hljs-string>"131.34.123.159"</span>,
+        <span class=hljs-attr>"geo"</span>: {
+            <span class=hljs-attr>"country"</span>: <span class=hljs-string>"IRL"</span>
+        },
+        <span class=hljs-attr>"language"</span>: <span class=hljs-string>"en"</span>,
+        <span class=hljs-attr>"os"</span>: <span class=hljs-string>"Linux &amp; UNIX"</span>,
+        <span class=hljs-attr>"js"</span>: <span class=hljs-number>0</span>,
+        <span class=hljs-attr>"ext"</span>: {
+            <span class=hljs-attr>"remote_addr"</span>: <span class=hljs-string>"131.34.123.159"</span>,
+            <span class=hljs-attr>"x_forwarded_for"</span>: <span class=hljs-string>""</span>,
+            <span class=hljs-attr>"accept_language"</span>: <span class=hljs-string>"en-GB;q=0.8,pt-PT;q=0.6,en;q=0.4,en-US;q=0.2,de;q=0.2,es;q=0.2,fr;q=0.2"</span>
+        }
+    },
+    <span class=hljs-attr>"user"</span>: {
+        <span class=hljs-attr>"id"</span>: <span class=hljs-string>"57592f333f8983.043587162282415065"</span>
+    },
+    <span class=hljs-attr>"ext"</span>: {
+        <span class=hljs-attr>"sub"</span>: <span class=hljs-number>1221</span>
+    }
+}
+</code></pre><p> </p><h4><a class=anchor aria-hidden=true id=push-notifications-192-x-192-bid-request-structure></a><a href=#push-notifications-192-x-192-bid-request-structure class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Push Notifications 192 x 192 Bid Request Structure</h4><ul><li><a href=#imp>imp</a><ul><li><a href=#imp-native>imp.native</a><ul><li><a href=#imp-native-request>imp.native.request</a><ul><li><a href=#imp-native-request-assets>imp.native.request.assets</a><ul><li><a href=#imp-native-request-assets-img>imp.native.request.assets.img</a></li><li><a href=#imp-native-request-assets-title>imp.native.request.assets.title</a></li><li><a href=#imp-native-request-assets-data>imp.native.request.assets.data</a></li><li><a href=#imp-native-request-assets-video>imp.native.request.assets.video</a></li></ul></li></ul></li></ul></li></ul></li><li><a href=#site>site</a><ul><li><a href=#site-ext>site.ext</a></li></ul></li><li><a href=#device>device</a><ul><li><a href=#device-geo>device.geo</a></li><li><a href=#device-ext>device.ext</a></li></ul></li><li><a href=#user>user</a></li></ul><p> </p><h3><a class=anchor aria-hidden=true id=in-page-push-notifications></a><a href=#in-page-push-notifications class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>In-Page Push Notifications</h3><pre><code class="css hljs language-json">{
+    <span class=hljs-attr>"id"</span>: <span class=hljs-string>"d4b5c697-41f3-4c1c-a3d5-5fd01b5ef2aa"</span>,
+    <span class=hljs-attr>"imp"</span>: [
+        {
+            <span class=hljs-attr>"id"</span>: <span class=hljs-string>"90180978"</span>,
+            <span class=hljs-attr>"native"</span>: {
+                <span class=hljs-attr>"request"</span>:<span class=hljs-string>"{\"native\":{\"ver\":\"1.2\",\"plcmttype\":501,\"plcmtcnt\":1,\"assets\":[{\"id\":1,\"required\":1,\"img\":{\"type\":1}},{\"id\":2,\"required\":1,\"title\":{\"len\":60}},{\"id\":3,\"required\":1,\"data\":{\"type\":2,\"len\":110}}]}}"</span>,
+                <span class=hljs-attr>"ver"</span>: <span class=hljs-string>"1.2"</span>
+            }
+        }
+    ],
+    <span class=hljs-attr>"site"</span>: {
+        <span class=hljs-attr>"id"</span>: <span class=hljs-string>"12345"</span>,
+        <span class=hljs-attr>"domain"</span>: <span class=hljs-string>"sitedomain.com"</span>,
+        <span class=hljs-attr>"cat"</span>: [<span class=hljs-string>"IAB25-3"</span>],
+        <span class=hljs-attr>"page"</span>: <span class=hljs-string>"https://sitedomain.com/page"</span>, 
+        <span class=hljs-attr>"keywords"</span>: <span class=hljs-string>"lifestyle, humour"</span>,
+        <span class=hljs-attr>"pagecat"</span>: [<span class=hljs-string>"IAB25-3"</span>]
+    },
+    <span class=hljs-attr>"device"</span>: {
+        <span class=hljs-attr>"ua"</span>: <span class=hljs-string>"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36"</span>,
+        <span class=hljs-attr>"ip"</span>: <span class=hljs-string>"131.34.123.159"</span>,
+        <span class=hljs-attr>"geo"</span>: {
+            <span class=hljs-attr>"country"</span>: <span class=hljs-string>"IRL"</span>
+        },
+        <span class=hljs-attr>"language"</span>: <span class=hljs-string>"en"</span>,
+        <span class=hljs-attr>"os"</span>: <span class=hljs-string>"Linux &amp; UNIX"</span>,
+        <span class=hljs-attr>"js"</span>: <span class=hljs-number>0</span>,
+        <span class=hljs-attr>"ext"</span>: {
+            <span class=hljs-attr>"remote_addr"</span>: <span class=hljs-string>"131.34.123.159"</span>,
+            <span class=hljs-attr>"x_forwarded_for"</span>: <span class=hljs-string>""</span>,
+            <span class=hljs-attr>"accept_language"</span>: <span class=hljs-string>"en-GB;q=0.8,pt-PT;q=0.6,en;q=0.4,en-US;q=0.2,de;q=0.2,es;q=0.2,fr;q=0.2"</span>
+        }
+    },
+    <span class=hljs-attr>"user"</span>: {
+        <span class=hljs-attr>"id"</span>: <span class=hljs-string>"57592f333f8983.043587162282415065"</span>
+    },
+    <span class=hljs-attr>"ext"</span>: {
+        <span class=hljs-attr>"sub"</span>: <span class=hljs-number>1221</span>
+    }
+}
+</code></pre><p> </p><h3><a class=anchor aria-hidden=true id=desktop-full-page-interstitial></a><a href=#desktop-full-page-interstitial class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Desktop Full Page Interstitial</h3><pre><code class="css hljs language-json">{
+    <span class=hljs-attr>"id"</span>: <span class=hljs-string>"d4b5c697-41f3-4c1c-a3d5-5fd01b5ef2aa"</span>,
+    <span class=hljs-attr>"at"</span>:<span class=hljs-number>1</span>,
+    <span class=hljs-attr>"imp"</span>: [
+        {
+            <span class=hljs-attr>"id"</span>: <span class=hljs-string>"974090632"</span>,
+            <span class=hljs-attr>"instl"</span>: <span class=hljs-number>1</span>,
+             <span class=hljs-attr>"banner"</span>: {
+                <span class=hljs-attr>"w"</span>: <span class=hljs-number>1600</span>,
+                <span class=hljs-attr>"h"</span>: <span class=hljs-number>900</span>,
+                <span class=hljs-attr>"mimes"</span>: [
+                  <span class=hljs-string>"image/jpg"</span>,
+                  <span class=hljs-string>"image/png"</span>,
+                  <span class=hljs-string>"video/mp4"</span>,
+                  <span class=hljs-string>"image/webp"</span>
+                ]
+            }
+        }
+    ],
+    <span class=hljs-attr>"site"</span>: {
+        <span class=hljs-attr>"id"</span>: <span class=hljs-string>"12345"</span>,
+        <span class=hljs-attr>"domain"</span>: <span class=hljs-string>"sitedomain.com"</span>,
+        <span class=hljs-attr>"name"</span>: <span class=hljs-string>"site domain"</span>,  
+        <span class=hljs-attr>"cat"</span>: [<span class=hljs-string>"IAB25-3"</span>],
+        <span class=hljs-attr>"page"</span>: <span class=hljs-string>"https://sitedomain.com/page"</span>,
+        <span class=hljs-attr>"keywords"</span>: <span class=hljs-string>"lifestyle, humour"</span>
+    },
+    <span class=hljs-attr>"device"</span>: {
+        <span class=hljs-attr>"ua"</span>: <span class=hljs-string>"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36"</span>,
+        <span class=hljs-attr>"ip"</span>: <span class=hljs-string>"131.34.123.159"</span>,
+        <span class=hljs-attr>"geo"</span>: {
+            <span class=hljs-attr>"country"</span>: <span class=hljs-string>"PRT"</span>
+        },
+        <span class=hljs-attr>"language"</span>: <span class=hljs-string>"en"</span>,
+        <span class=hljs-attr>"os"</span>: <span class=hljs-string>"Linux &amp; UNIX"</span>,
+        <span class=hljs-attr>"js"</span>: <span class=hljs-number>0</span>,
+        <span class=hljs-attr>"ext"</span>: {
+            <span class=hljs-attr>"remote_addr"</span>: <span class=hljs-string>"131.34.123.159"</span>,
+            <span class=hljs-attr>"x_forwarded_for"</span>: <span class=hljs-string>"131.34.123.159"</span>
+        }
+    },
+    <span class=hljs-attr>"user"</span>: {
+        <span class=hljs-attr>"id"</span>: <span class=hljs-string>"57592f333f8983.043587162282415065"</span>
+    },
+    <span class=hljs-attr>"ext"</span>: {
+        <span class=hljs-attr>"sub"</span>: <span class=hljs-number>1221</span>
+    }
+}
+</code></pre><p> </p><h4><a class=anchor aria-hidden=true id=full-page-interstitial></a><a href=#full-page-interstitial class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Full Page Interstitial</h4><ul><li><a href=#imp>imp</a><ul><li><a href=#imp-full-page-interstitial>imp.full-page-interstitial</a></li></ul></li><li><a href=#site>site</a><ul><li><a href=#site-ext>site.ext</a></li></ul></li><li><a href=#device>device</a><ul><li><a href=#device-geo>device.geo</a></li><li><a href=#device-ext>device.ext</a></li></ul></li><li><a href=#user>user</a></li></ul><p> </p><h3><a class=anchor aria-hidden=true id=mobile-full-page-interstitial></a><a href=#mobile-full-page-interstitial class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Mobile Full Page Interstitial</h3><pre><code class="css hljs language-json">{
+    <span class=hljs-attr>"id"</span>: <span class=hljs-string>"d4b5c697-41f3-4c1c-a3d5-5fd01b5ef2aa"</span>,
+    <span class=hljs-attr>"at"</span>:<span class=hljs-number>1</span>,
+    <span class=hljs-attr>"imp"</span>: [
+        {
+            <span class=hljs-attr>"id"</span>: <span class=hljs-string>"974090632"</span>,
+            <span class=hljs-attr>"instl"</span>: <span class=hljs-number>1</span>,
+             <span class=hljs-attr>"banner"</span>: {
+                <span class=hljs-attr>"w"</span>: <span class=hljs-number>900</span>,
+                <span class=hljs-attr>"h"</span>: <span class=hljs-number>1600</span>,
+                <span class=hljs-attr>"mimes"</span>: [
+                  <span class=hljs-string>"image/jpg"</span>,
+                  <span class=hljs-string>"image/png"</span>,
+                  <span class=hljs-string>"video/mp4"</span>,
+                  <span class=hljs-string>"image/webp"</span>
+                ]
+            }
+        }
+    ],
+    <span class=hljs-attr>"site"</span>: {
+        <span class=hljs-attr>"id"</span>: <span class=hljs-string>"12345"</span>,
+        <span class=hljs-attr>"domain"</span>: <span class=hljs-string>"sitedomain.com"</span>,
+        <span class=hljs-attr>"name"</span>: <span class=hljs-string>"site domain"</span>,  
+        <span class=hljs-attr>"cat"</span>: [<span class=hljs-string>"IAB25-3"</span>],
+        <span class=hljs-attr>"page"</span>: <span class=hljs-string>"https://sitedomain.com/page"</span>,
+        <span class=hljs-attr>"keywords"</span>: <span class=hljs-string>"lifestyle, humour"</span>
+    },
+    <span class=hljs-attr>"device"</span>: {
+        <span class=hljs-attr>"ua"</span>: <span class=hljs-string>"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36"</span>,
+        <span class=hljs-attr>"ip"</span>: <span class=hljs-string>"131.34.123.159"</span>,
+        <span class=hljs-attr>"geo"</span>: {
+            <span class=hljs-attr>"country"</span>: <span class=hljs-string>"PRT"</span>
+        },
+        <span class=hljs-attr>"language"</span>: <span class=hljs-string>"en"</span>,
+        <span class=hljs-attr>"os"</span>: <span class=hljs-string>"Linux &amp; UNIX"</span>,
+        <span class=hljs-attr>"js"</span>: <span class=hljs-number>0</span>,
+        <span class=hljs-attr>"ext"</span>: {
+            <span class=hljs-attr>"remote_addr"</span>: <span class=hljs-string>"131.34.123.159"</span>,
+            <span class=hljs-attr>"x_forwarded_for"</span>: <span class=hljs-string>"131.34.123.159"</span>
+        }
+    },
+    <span class=hljs-attr>"user"</span>: {
+        <span class=hljs-attr>"id"</span>: <span class=hljs-string>"57592f333f8983.043587162282415065"</span>
+    },
+    <span class=hljs-attr>"ext"</span>: {
+        <span class=hljs-attr>"sub"</span>: <span class=hljs-number>1221</span>
+    }
+}
+</code></pre><p> </p><h4><a class=anchor aria-hidden=true id=full-page-interstitial-1></a><a href=#full-page-interstitial-1 class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Full Page Interstitial</h4><ul><li><a href=#imp>imp</a><ul><li><a href=#imp-full-page-interstitial>imp.full-page-interstitial</a></li></ul></li><li><a href=#site>site</a><ul><li><a href=#site-ext>site.ext</a></li></ul></li><li><a href=#device>device</a><ul><li><a href=#device-geo>device.geo</a></li><li><a href=#device-ext>device.ext</a></li></ul></li><li><a href=#user>user</a></li></ul><p> </p></span></div></article></div><div class=docs-prevnext><a href=../../open-rtb-publishers/index.html class="button docs-prev"><span class=arrow-prev>← </span><span>Open RTB Integration</span></a><a href=../../bid-response/open-rtb-publishers-response/index.html class="button docs-next"><span>Open RTB 2.4 Bid Response</span><span class=arrow-next> →</span></a></div></div></div><nav class=onPageNav><ul class=toc-headings><li><a href=#suggested-bid-request-headers>Suggested Bid Request Headers</a></li><li><a href=#bid-request>Bid Request</a></li><li><a href=#imp>imp</a><ul class=toc-headings><li><a href=#impbanner>imp.banner</a></li><li><a href=#impbannerext>imp.banner.ext</a></li><li><a href=#impfull-page-interstitial>imp.full-page-interstitial</a></li><li><a href=#impinstl>imp.instl</a></li><li><a href=#impnative-for-native-and-push-notification-ads>imp.native (for Native and Push Notification Ads)</a></li><li><a href=#impnativerequest>imp.native.request</a></li><li><a href=#impnativerequestassets>imp.native.request.assets</a></li><li><a href=#impnativerequestassetsimg>imp.native.request.assets.img</a></li><li><a href=#impnativerequestassetstitle>imp.native.request.assets.title</a></li><li><a href=#impnativerequestassetsdata>imp.native.request.assets.data</a></li><li><a href=#impnativerequestassetsvideo>imp.native.request.assets.video</a></li><li><a href=#impvideo>imp.video</a></li><li><a href=#impext>imp.ext</a></li></ul></li><li><a href=#site>site</a><ul class=toc-headings><li><a href=#siteext>site.ext</a></li></ul></li><li><a href=#app>app</a><ul class=toc-headings><li><a href=#apppublisher>app.publisher</a></li></ul></li><li><a href=#device>device</a><ul class=toc-headings><li><a href=#devicegeo>device.geo</a></li><li><a href=#deviceext>device.ext</a></li><li><a href=#devicesua>device.sua</a></li></ul></li><li><a href=#user>user</a></li><li><a href=#ext>ext</a></li><li><a href=#examples>Examples</a><ul class=toc-headings><li><a href=#banner>Banner</a></li><li><a href=#direct-links>Direct Links</a></li><li><a href=#email-clicks>Email Clicks</a></li><li><a href=#in-stream-video-outstream-video-video-slider>In-Stream Video, Outstream Video, Video Slider</a></li><li><a href=#native>Native</a></li><li><a href=#popunder>Popunder</a></li><li><a href=#push-notifications---720-x-480>Push Notifications - 720 x 480</a></li><li><a href=#push-notifications---192-x-192>Push Notifications - 192 x 192</a></li><li><a href=#in-page-push-notifications>In-Page Push Notifications</a></li><li><a href=#desktop-full-page-interstitial>Desktop Full Page Interstitial</a></li><li><a href=#mobile-full-page-interstitial>Mobile Full Page Interstitial</a></li></ul></li></ul></nav></div><footer class=nav-footer id=footer style=display:none><section class=sitemap><a href=../../../../../index.html class=nav-home><img alt=Documentation src=../../../../../img/exads.svg height=58 width=66 /></a><div></div><div><h5>Community</h5><a href=https://github.com/GatherStar target=_blank rel="noreferrer noopener">Github</a></div><div><h5>Useful Links</h5><a href=https://www.exads.com/ target=_blank>GatherStar</a></div></section><section class=copyright>Copyright © 2025 GatherStar</section></footer></div><script src=../../../../../../cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js></script><script>document.addEventListener("keyup",function(e){if(e.target===document.body&&191===e.keyCode){const e=document.getElementById("search_input_react");e&&e.focus()}});</script><script>docsearch({appId:"2PYAVRHSND",apiKey:"e7e7cec138ad66530a6fb8a42c66b8ce",indexName:"exads",inputSelector:"#search_input_react",algoliaOptions:{}});</script></body></html>

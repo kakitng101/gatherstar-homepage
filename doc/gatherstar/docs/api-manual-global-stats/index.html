@@ -1,0 +1,599 @@
+<!DOCTYPE html><html lang=en><head><meta charSet=utf-8 /><meta content="IE=edge" http-equiv=X-UA-Compatible /><title>Global Statistics API · Documentation</title><meta content="width=device-width,initial-scale=1" name=viewport /><meta content=Docusaurus name=generator /><meta content="This section describes the Global Statistics API request parameters and result data.  " name=description /><meta content=en name=docsearch:language /><meta content="Global Statistics API · Documentation" property=og:title /><meta content=website property=og:type /><meta content=../../index.html property=og:url /><meta content="This section describes the Global Statistics API request parameters and result data.  " property=og:description /><meta content=../../img/docusaurus.html property=og:image /><meta content=summary name=twitter:card /><meta content=../../img/docusaurus.html name=twitter:image /><link href=../../img/favicon.png rel="shortcut icon"/><link href=../../../cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css rel=stylesheet /><link href=../../../cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css rel=stylesheet /><script src=../../../cdn.cookielaw.org/consent/ddf2749f-45af-42cb-91a1-cca420436707/OtAutoBlock.js></script><script src=../../js/cookielaw.js></script><script src=../../js/postback.js></script><script src=../../../cdn.cookielaw.org/scripttemplates/otSDKStub.js data-domain-script=ddf2749f-45af-42cb-91a1-cca420436707></script><script src=../../js/scrollSpy.js></script><link href=../../css/main.css rel=stylesheet /><script src=../../js/codetabs.js></script></head><body class="separateOnPageNav sideNavVisible"><div class=fixedHeaderContainer style=background:#0077fd><div class="wrapper headerWrapper"><header><a href=../../index.html><img alt=Documentation src=../../img/exads.svg class=logo /><h2 class=headerTitleWithLogo>Documentation</h2></a><div class="navigationSlider navigationWrapper"><nav class=slidingNav><ul class="nav-site nav-site-internal"><li class=""><a href=../introduction/index.html target=_self>General</a></li><li class=""><a href=../advertisers-introduction/index.html target=_self>Advertisers</a></li><li class=""><a href=../publishers-introduction/index.html target=_self>Publishers</a></li><li class=""><a href=../rtb-demand/index.html target=_self>RTB</a></li><li class=siteNavGroupActive><a href=../api-manual-overview/index.html target=_self>API</a></li><li class=""><a href=../api-manual-overview/index.html target=_self></a></li><li class=""><a target=_self></a></li><li class="navSearchWrapper reactNavSearchWrapper" style=display:none!important><input id=search_input_react placeholder=Search title=Search type=text /></li></ul></nav></div></header></div></div><div class=navPusher><div class="wrapper docMainWrapper"><div class=docsNavContainer id=docsNav><nav class=toc><div class=toggleNav><section class="wrapper navWrapper"><div class="wrapper navBreadcrumb"><div class=navToggle id=navToggler><div class=hamburger-menu><div class=line1></div><div class=line2></div><div class=line3></div></div></div><h2><i>›</i><span>GatherStar Public API</span></h2><div class=tocToggler id=tocToggler><i class=icon-toc></i></div></div><div class=navGroups><div class=navGroup><h3 class="collapsible navGroupCategoryTitle">GatherStar Public API<span class=arrow><svg height=24 viewBox="0 0 24 24" width=24><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill=#565656></path><path d="M0 0h24v24H0z" fill=none></path></svg></span></h3><ul class=hide><li class=navListItem><a class=navItem href=../api-manual-overview/index.html>API Overview</a></li><li class=navListItem><a class=navItem href=../developer-api/index.html>Developer API</a></li><li class=navListItem><a class=navItem href=../api-manual-versions/index.html>Versions</a></li><li class=navListItem><a class=navItem href=../api-manual-interface/index.html>API Interface</a></li><li class=navListItem><a class=navItem href=../api-manual-http-headers/index.html>HTTP Headers</a></li><li class=navListItem><a class=navItem href=../api-manual-http-verbs/index.html>HTTP Verbs</a></li><li class=navListItem><a class=navItem href=../api-manual-returned-data/index.html>Returned Data Standard Types</a></li><li class=navListItem><a class=navItem href=../api-manual-errors/index.html>Errors</a></li><li class=navListItem><a class=navItem href=../api-manual-macros/index.html>Macros</a></li><li class=navListItem><a class=navItem href=../api-manual-pagination/index.html>Pagination</a></li><li class=navListItem><a class=navItem href=../api-manual-rate-limiting/index.html>Rate Limiting</a></li><li class="navListItem navListItemActive"><a class=navItem href=index.html>Global Statistics API</a></li><li class=navListItem><a class=navItem href=../api-manual-php-examples/index.html>PHP Examples</a></li></ul></div><div class=navGroup><h3 class="collapsible navGroupCategoryTitle">Ad Placement API<span class=arrow><svg height=24 viewBox="0 0 24 24" width=24><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill=#565656></path><path d="M0 0h24v24H0z" fill=none></path></svg></span></h3><ul class=hide><li class=navListItem><a class=navItem href=../ad-placement-api-overview/index.html>Ad Placement API Overview</a></li><li class=navListItem><a class=navItem href=../ad-plac-request/index.html>Request</a></li><li class=navListItem><a class=navItem href=../ad-plac-response/index.html>Response</a></li><li class=navListItem><a class=navItem href=../ad-plac-errors/index.html>Errors</a></li><li class=navListItem><a class=navItem href=../ad-plac-error-examples/index.html>Error Examples</a></li><li class=navListItem><a class=navItem href=../ad-plac-renderers/index.html>Renderers</a></li></ul></div><div class=navGroup><h3 class="collapsible navGroupCategoryTitle">Conversion Tracking API<span class=arrow><svg height=24 viewBox="0 0 24 24" width=24><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill=#565656></path><path d="M0 0h24v24H0z" fill=none></path></svg></span></h3><ul class=hide><li class=navListItem><a class=navItem href=../conversion-tracking-api/index.html>Conversion Tracking API</a></li></ul></div></div></section></div><script>for(var e=document.getElementsByClassName("collapsible"),t=!0,n=0;n<e.length;n++){var o=e[n].nextElementSibling.getElementsByTagName("*");if(t)for(var i=0;i<o.length;i++)if(o[i].classList.contains("navListItemActive")){e[n].nextElementSibling.classList.toggle("hide"),e[n].childNodes[1].classList.toggle("rotate"),t=!1;break}e[n].addEventListener("click",function(){this.childNodes[1].classList.toggle("rotate"),this.nextElementSibling.classList.toggle("hide")})}document.addEventListener("DOMContentLoaded",function(){t("#navToggler","#docsNav","docsSliderActive"),t("#tocToggler","body","tocActive");var e=document.querySelector(".toc-headings");function t(e,t,n){var o=document.querySelector(e),i=document.querySelector(t);o&&(o.onclick=function(e){e.preventDefault(),i.classList.toggle(n)})}e&&e.addEventListener("click",function(t){for(var n=t.target;n!==e;){if("A"===n.tagName){document.body.classList.remove("tocActive");break}n=n.parentNode}},!1)});</script></nav></div><div class="container docsContainer mainContainer"><div class=wrapper><div class=post><header class=postHeader><h1 class=postHeaderTitle id=__docusaurus>Global Statistics API</h1></header><article><div><span><p>This section describes the Global Statistics API request parameters and result data.</p><hr><p><strong>Note</strong>: The statistics API routes have been renamed:</p><ul><li>/statistics/advertiser/... -&gt; /statistics/a/...</li><li>/statistics/publisher/... -&gt; /statistics/p/...</li></ul><hr><hr><p><strong>Note</strong>: The Global Statistics API only shows skipped RTB queries for Date, Sites, Zones, Countries, Regions, and Sub IDs.</p><hr><table><thead><tr><th>Parameter</th><th>Description</th><th>Notes</th><th>Type</th></tr></thead><tbody><tr><td>count</td><td>Return only the total of results.</td><td>integer</td><td>optional</td></tr><tr><td>detailed</td><td>Get more detail if possible.</td><td>integer</td><td>optional</td></tr><tr><td>timezone</td><td>Timezone setting for 'hour' filter and 'group_by'</td><td>string</td><td>optional</td></tr><tr><td>totals</td><td>Indicates whether add totals to response or not.</td><td>integer</td><td>optional</td></tr><tr><td>filter</td><td>Filters to restrict the returned values of a statistics query</td><td>object</td><td>optional</td></tr><tr><td>group_by</td><td>A list of group by values to be applied in the data. Maximum four are permitted.</td><td>array</td><td>mandatory</td></tr><tr><td>order_by</td><td>Ordering of results by a specific field(s). A maximum of two are permitted.</td><td>array</td><td>optional</td></tr><tr><td>projection</td><td>Individual sub-structures a user wants to have returned in the response.</td><td>array</td><td>optional</td></tr><tr><td>limit</td><td>The number of records to return in this response.</td><td>integer</td><td>optional</td></tr><tr><td>offset</td><td>The position to retrieve the records from.</td><td>integer</td><td>optional</td></tr></tbody></table><p> </p><h2><a class=anchor aria-hidden=true id=parameter-count></a><a class=hash-link aria-hidden=true href=#parameter-count><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Parameter count</h2><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Property</td><td>count</td></tr><tr><td>Type</td><td>optional</td></tr><tr><td>Variable type</td><td>integer</td></tr><tr><td>Default Value</td><td>0</td></tr><tr><td>Available values</td><td>[0, 1]</td></tr><tr><td>Description</td><td>Return only the total of results.</td></tr></tbody></table><p> </p><h4><a class=anchor aria-hidden=true id=example></a><a class=hash-link aria-hidden=true href=#example><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example:</h4><pre><code class=hljs>    {
+        <span class=hljs-attr>"count"</span>: <span class=hljs-number>1</span>
+    }
+</code></pre><p> </p><h2><a class=anchor aria-hidden=true id=parameter-detailed></a><a class=hash-link aria-hidden=true href=#parameter-detailed><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Parameter detailed</h2><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Property</td><td>detailed</td></tr><tr><td>Type</td><td>optional</td></tr><tr><td>Variable type</td><td>integer</td></tr><tr><td>Default Value</td><td>0</td></tr><tr><td>Available values</td><td>[0, 1]</td></tr><tr><td>Description</td><td>Whether to return detailed information or not.</td></tr></tbody></table><p> </p><h4><a class=anchor aria-hidden=true id=example-1></a><a class=hash-link aria-hidden=true href=#example-1><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example:</h4><pre><code class=hljs>    {
+        <span class=hljs-attr>"detailed"</span>: <span class=hljs-number>1</span>
+    }
+</code></pre><p> </p><h2><a class=anchor aria-hidden=true id=parameter-timezone></a><a class=hash-link aria-hidden=true href=#parameter-timezone><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Parameter timezone</h2><p>Timezone setting for <code>hour</code> filter and <code>group_by</code>.</p><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Property</td><td>timezone</td></tr><tr><td>Type</td><td>optional</td></tr><tr><td>Variable type</td><td>string</td></tr><tr><td>Default Value</td><td>America/New_york</td></tr><tr><td>Available values</td><td>Set timezone field of / collections / timezones</td></tr><tr><td>Description</td><td>NOTE: Timezones are only relevant when we are querying based on hourly data, for non-hourly data this is a no-op.</td></tr></tbody></table><p> </p><h4><a class=anchor aria-hidden=true id=example-2></a><a class=hash-link aria-hidden=true href=#example-2><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example:</h4><pre><code class=hljs>    {
+        <span class=hljs-attr>"timezone"</span>: <span class=hljs-string>"Europe/Dublin"</span>
+    }
+</code></pre><p> </p><h2><a class=anchor aria-hidden=true id=parameter-totals></a><a class=hash-link aria-hidden=true href=#parameter-totals><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Parameter totals</h2><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Property</td><td>totals</td></tr><tr><td>Type</td><td>optional</td></tr><tr><td>Variable type</td><td>integer</td></tr><tr><td>Default Value</td><td>0</td></tr><tr><td>Available values</td><td>[0,1]</td></tr><tr><td>Description</td><td>Indicates whether add totals to response or not.</td></tr></tbody></table><p> </p><h4><a class=anchor aria-hidden=true id=example-3></a><a class=hash-link aria-hidden=true href=#example-3><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example:</h4><pre><code class=hljs>    {
+        <span class=hljs-attr>"totals"</span>: <span class=hljs-number>1</span>
+    }
+</code></pre><p> </p><h2><a class=anchor aria-hidden=true id=parameter-filter></a><a class=hash-link aria-hidden=true href=#parameter-filter><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Parameter filter</h2><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Property</td><td>filter</td></tr><tr><td>Type</td><td>optional</td></tr><tr><td>Variable type</td><td>object</td></tr><tr><td>Available option for Advertisers</td><td>[”adblock”, ”advertiser_ad_type_id”, “browser_id”, “carrier_id”, “category_id”, “country_iso”, “date_from”, “date_to”, “device_id”, “device_type_id”, hour”, “language_id”, “operating_system_id”, “region_id”, “site_hostname”, “site_id”, “size”, “sub”, “zone_id”, “campaign_id”, “exclude_deleted”, “offer_id”, “offer_landing_page_id”, “variation_id”]</td></tr><tr><td>Available option for Publishers</td><td>[”adblock”, “browser_id”, “carrier_id”, “category_id”, “country_iso”, “date_from”, “date_to”, “device_id”, “device_type_id”, “hour”, “language_id”, “operating_system_id”, “region_id”, “site_hostname”, “site_id”, “zone_id”, “publisher_ad_type_id”, “size”, “sub”]</td></tr><tr><td>Description</td><td>Filter by certain parameters.</td></tr></tbody></table><p> </p><h3><a class=anchor aria-hidden=true id=filter-country_iso></a><a class=hash-link aria-hidden=true href=#filter-country_iso><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Filter: <code>country_iso</code></h3><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Property</td><td>country_iso</td></tr><tr><td>Type</td><td>optional</td></tr><tr><td>Variable type</td><td>string</td></tr><tr><td>Default Value</td><td>-</td></tr><tr><td>Available values</td><td>See /collections/countries endpoint iso3 property</td></tr><tr><td>Description</td><td>List of ISO 3 code</td></tr></tbody></table><p> </p><h4><a class=anchor aria-hidden=true id=example-4></a><a class=hash-link aria-hidden=true href=#example-4><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example:</h4><pre><code class=hljs>    {
+        <span class=hljs-attr>"filter"</span>: {
+            <span class=hljs-attr>"country_iso"</span>: [<span class=hljs-string>"ESP"</span>, <span class=hljs-string>"IRL"</span>]
+        }
+    }
+</code></pre><p> </p><h3><a class=anchor aria-hidden=true id=filter-date_from-date_to></a><a class=hash-link aria-hidden=true href=#filter-date_from-date_to><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Filter <code>date_from</code>, <code>date_to</code></h3><p>The <code>date_from</code> and <code>date_to</code> parameters control the window over which you want to fetch stats information.</p><ul><li>date_from: Date from range for statistics, (Default beginning of month),</li><li>date_to: Date to range for statistics, (Default today)</li></ul><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Property</td><td>date_from, date_to</td></tr><tr><td>Type</td><td>optional</td></tr><tr><td>Variable type</td><td>string</td></tr><tr><td>Default Value</td><td>The dates default to the current month.</td></tr><tr><td>Available values</td><td>YYYY-mm-dd</td></tr><tr><td>Description</td><td>Date from/to range for statistics. Format YYYY-mm-dd</td></tr></tbody></table><p> </p><h4><a class=anchor aria-hidden=true id=example-5></a><a class=hash-link aria-hidden=true href=#example-5><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example:</h4><pre><code class=hljs>{
+        <span class=hljs-attr>"filter"</span>: {
+            <span class=hljs-attr>"date_from"</span>: <span class=hljs-string>"2019-02-25"</span>,
+            <span class=hljs-attr>"date_to"</span>: <span class=hljs-string>"2019-02-28"</span>
+        }
+}
+</code></pre><p>Timezones are only relevant when we are querying based on hourly data, for non-hourly data this is a no-op.</p><p> </p><h3><a class=anchor aria-hidden=true id=filter-advertiser_ad_type_id-campaign_id-browser_id-carrier_id-category_id-device_id-device_type_id-language_id-offer_id-offer_landing_page_id-operating_system_id-hour-region_id-site_id-sub-variation_id-zone_id-publisher_ad_type_id></a><a class=hash-link aria-hidden=true href=#filter-advertiser_ad_type_id-campaign_id-browser_id-carrier_id-category_id-device_id-device_type_id-language_id-offer_id-offer_landing_page_id-operating_system_id-hour-region_id-site_id-sub-variation_id-zone_id-publisher_ad_type_id><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Filter: advertiser_ad_type_id, campaign_id, browser_id, carrier_id, category_id, device_id, device_type_id, language_id, offer_id, offer_landing_page_id, operating_system_id, hour, region_id, site_id, sub, variation_id, zone_id, publisher_ad_type_id</h3><p> </p><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Property</td><td>advertiser_ad_type_id, campaign_id, browser_id, carrier_id, category_id, device_id, device_type_id, language_id, offer_id, offer_landing_page_id, operating_system_id, hour, region_id, site_id, sub, variation_id, zone_id, advertiser_ad_type_id, publisher_ad_type_id</td></tr><tr><td>Type</td><td>optional</td></tr><tr><td>Variable type</td><td>array</td></tr><tr><td>Items type</td><td>integer</td></tr><tr><td>Default Value</td><td>-</td></tr><tr><td>Available values</td><td>Relative properties OR collections</td></tr><tr><td>Description</td><td>List of entity Ids</td></tr></tbody></table><p> </p><h4><a class=anchor aria-hidden=true id=example-6></a><a class=hash-link aria-hidden=true href=#example-6><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example:</h4><pre><code class=hljs>    {
+        <span class=hljs-attr>"filter"</span>: {
+            <span class=hljs-attr>"campaign_id"</span>: [<span class=hljs-number>123</span>, <span class=hljs-number>456</span>],
+            <span class=hljs-attr>"browser_id"</span>: [<span class=hljs-number>789</span>]
+        }
+    }
+</code></pre><p> </p><h3><a class=anchor aria-hidden=true id=filter-exclude_deleted></a><a class=hash-link aria-hidden=true href=#filter-exclude_deleted><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Filter: <code>exclude_deleted</code></h3><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Property</td><td>exclude_deleted</td></tr><tr><td>Type</td><td>optional</td></tr><tr><td>Variable type</td><td>integer</td></tr><tr><td>Default Value</td><td>0</td></tr><tr><td>Available values</td><td>[0, 1]</td></tr><tr><td>Description</td><td>Whether to exclude deleted campaigns or not.</td></tr><tr><td></td><td></td></tr></tbody></table><p> </p><h4><a class=anchor aria-hidden=true id=example-7></a><a class=hash-link aria-hidden=true href=#example-7><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example:</h4><pre><code class=hljs>{
+        <span class=hljs-attr>"filter"</span>: {
+            <span class=hljs-attr>"exclude_deleted"</span>: <span class=hljs-number>1</span>
+        }
+}
+</code></pre><p> </p><h3><a class=anchor aria-hidden=true id=filter-adblock></a><a class=hash-link aria-hidden=true href=#filter-adblock><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Filter: <code>adblock</code></h3><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Property</td><td>adblock</td></tr><tr><td>Type</td><td>optional</td></tr><tr><td>Variable type</td><td>string</td></tr><tr><td>Default Value</td><td>&quot;all&quot;</td></tr><tr><td>Available values</td><td>&quot;adblock&quot;, &quot;all&quot;, &quot;standard&quot;</td></tr><tr><td>Description</td><td>Whether to include adblock zones or not.</td></tr></tbody></table><p> </p><h4><a class=anchor aria-hidden=true id=example-8></a><a class=hash-link aria-hidden=true href=#example-8><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example:</h4><pre><code class=hljs>    {
+        <span class=hljs-attr>"filter"</span>: {
+            <span class=hljs-attr>"adblock"</span>: <span class=hljs-string>"standard"</span>
+        }
+    }
+</code></pre><p> </p><h3><a class=anchor aria-hidden=true id=filter-site_hostname></a><a class=hash-link aria-hidden=true href=#filter-site_hostname><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Filter: <code>site_hostname</code></h3><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Property</td><td>site_hostname</td></tr><tr><td>Type</td><td>optional</td></tr><tr><td>Variable type</td><td>string</td></tr><tr><td>Default Value</td><td>-</td></tr><tr><td>Available values</td><td>Valid characters for hostnames are letters from a to z, the digits from 0 to 9, hyphen and dot.</td></tr><tr><td>Description</td><td>Filter by site hostname.</td></tr></tbody></table><p> </p><h4><a class=anchor aria-hidden=true id=example-9></a><a class=hash-link aria-hidden=true href=#example-9><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example:</h4><pre><code class=hljs>        {
+        <span class=hljs-attr>"filter"</span>: {
+            <span class=hljs-attr>"site_hostname"</span>: [<span class=hljs-string>"www.example.com"</span>, <span class=hljs-string>"www.example-site.org"</span>]
+        }
+    }
+</code></pre><p> </p><h3><a class=anchor aria-hidden=true id=filter-size></a><a class=hash-link aria-hidden=true href=#filter-size><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Filter: <code>size</code></h3><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Property</td><td>size</td></tr><tr><td>Type</td><td>optional</td></tr><tr><td>Variable type</td><td>string</td></tr><tr><td>Default Value</td><td>-</td></tr><tr><td>Available values</td><td>Valid characters for size are the digits from 0 to 9 and x character. Example 300x100</td></tr><tr><td>Description</td><td>Filter by size</td></tr></tbody></table><p> </p><h4><a class=anchor aria-hidden=true id=example-10></a><a class=hash-link aria-hidden=true href=#example-10><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example:</h4><pre><code class=hljs>           {
+        <span class=hljs-attr>"filter"</span>: {
+            <span class=hljs-attr>"size"</span>: [<span class=hljs-string>"300x100"</span>]
+        }
+    }
+</code></pre><p> </p><h2><a class=anchor aria-hidden=true id=parameter-group_by></a><a class=hash-link aria-hidden=true href=#parameter-group_by><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Parameter group_by</h2><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Property</td><td>group_by</td></tr><tr><td>Type</td><td>mandatory</td></tr><tr><td>Variable type</td><td>array</td></tr><tr><td>Items type</td><td>string</td></tr><tr><td>Default Value</td><td>-</td></tr><tr><td>Available values for Advertisers</td><td>[”adblock”, “advertiser_ad_type_id”, browser_id”, “campaign_id”, “carrier_id”, “category_id”, “country_iso”, “date”, “hour”, “device_id”, “device_type_id”, “language_id”, “operating_system_id”, “region_id”, “site_id”, “sub”, “zone_id”, “week”, “month”, “quarter”, “year”, “offer_id”, “offer_landing_page_id”, “site_hostname”, “size”, “variation_id”]</td></tr><tr><td>Available values for Publishers</td><td>[“adblock”, “browser_id”, “carrier_id”, “category_id”, “country_iso”, “date”, “device_id”, “device_type_id”, “hour”, “language_id”, “operating_system_id”, “publisher_ad_type_id” “region_id”, “site_id”, “size”, “sub”, “zone_id”, “week”, “month”, “quarter”, “year”]</td></tr><tr><td>Description</td><td>A list of sub-requests to include additional data in response.</td></tr></tbody></table><p> </p><h4><a class=anchor aria-hidden=true id=example-11></a><a class=hash-link aria-hidden=true href=#example-11><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example:</h4><pre><code class=hljs>    {
+      <span class=hljs-attr>"group_by"</span>: [
+        <span class=hljs-string>"browser"</span>,
+        <span class=hljs-string>"date"</span>
+      ]
+    }
+</code></pre><p> </p><h2><a class=anchor aria-hidden=true id=parameter-order_by></a><a class=hash-link aria-hidden=true href=#parameter-order_by><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Parameter order_by</h2><table><thead><tr><th>Property</th><th>order_by</th></tr></thead><tbody><tr><td>Type</td><td>optional</td></tr><tr><td>Variable type</td><td>array</td></tr><tr><td>Items type</td><td>string</td></tr><tr><td>Default Value</td><td>-</td></tr><tr><td>Available metrics field values</td><td>[“cpc”, “cpc”, “cpm”, “cpv”, “ctr”, “clicks”, “impressions”, “video_impressions”, “video_views”, “vtr”, “rtb_win_ratio”, “rtb_avg_total_time”, “rtb_skipped”, “rtb_bid_response_ratio”, “rtb_avg_cpm”, “rtb_timeouts_ratio”, “rt_errors_ratio”, “rtb_no_bid_ratio”, “rtb_skipped_ratio”]</td></tr><tr><td>Available field values dependent on `group_by’ for Advertisers</td><td>[”adblock”, “browser_id”, “campaign_id”, “carrier_id”, “category_id”, “country_iso”, “device_id”, “date”, “device_type_id”, “hour”, “ecpa1”, “g1”,“language_id”, “month”, “offer_id”, “offer_landing_page_id”, “operating_system_id”, “quarter”, “region_id”, “site_hostname”, “site_id”, “sub”, “variation_id”, “week”, “year” ,“zone_id”]</td></tr><tr><td>Available field values dependent on `group_by’ for Publishers</td><td>[“adblock”, “browser_id”, “carrier_id”, “category_id”, “country_iso”, “device_id”, “date”, “device_type_id” , “hour”, “language_id”, “month”, “operating_system_id”, “quarter”, “region_id”, “site_id”, “sub”, “week”, “year”, “zone_id”]</td></tr><tr><td>Available order values</td><td>[“asc”, “desc”]</td></tr><tr><td>Description</td><td>A list of available order by options</td></tr></tbody></table><hr><p><strong>Hints</strong>:</p><ul><li>The metrics fields are available all the time to use as order by field.</li><li>To order by specific value (for example by “browser_id”), you need to include it in “group_by” parameter.</li></ul><hr><p>The “g1”, “ecpa1” values are only available when user has Conversion Tracking (Goals). All goals associated with a serial number (g1, g2, …gx). The eCPA values are accordingly ecpa1, ecpa2, …ecpax.</p><p> </p><h4><a class=anchor aria-hidden=true id=example-12></a><a class=hash-link aria-hidden=true href=#example-12><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example:</h4><pre><code class=hljs>    {
+      <span class=hljs-attr>"order_by"</span>: [
+        {
+          <span class=hljs-attr>"field"</span>: <span class=hljs-string>"impressions"</span>,
+          <span class=hljs-attr>"order"</span>: <span class=hljs-string>"desc"</span>
+        }
+      ]
+    }
+</code></pre><p>Example to organize the campaign results chronologically, the “date” need to be included in both “group_by” and “order_by”:</p><pre><code class=hljs>{
+  <span class=hljs-attr>"group_by"</span>: [
+    <span class=hljs-string>"campaign_id"</span>,
+    <span class=hljs-string>"date"</span>
+  ],
+  <span class=hljs-attr>"order_by"</span>:[
+    {
+      <span class=hljs-attr>"field"</span>: <span class=hljs-string>"date"</span>,
+      <span class=hljs-attr>"order"</span>: <span class=hljs-string>"asc"</span>
+    }
+  ]
+}
+</code></pre><p> </p><h2><a class=anchor aria-hidden=true id=parameter-projection></a><a class=hash-link aria-hidden=true href=#parameter-projection><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Parameter projection</h2><p>The projection parameter reflects what will be returned in the resulting payload, if not specified all sub structures will be returned.</p><table><thead><tr><th>Property</th><th>projection</th></tr></thead><tbody><tr><td>Type</td><td>optional</td></tr><tr><td>Variable type</td><td>array</td></tr><tr><td>Items type</td><td>string</td></tr><tr><td>Default Value</td><td>all options,,see below</td></tr><tr><td>Available field values for Advertisers</td><td>[“base”, “rtb”, “video”, “goals”]</td></tr><tr><td>Available field values for Publishers</td><td>[“base”, “rtb”, “video”, “wpn”]</td></tr></tbody></table><p> </p><h4><a class=anchor aria-hidden=true id=example-13></a><a class=hash-link aria-hidden=true href=#example-13><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example:</h4><pre><code class="hljs css language-json">    {
+      <span class=hljs-attr>"projection"</span>: [
+        <span class=hljs-string>"video"</span>
+      ]
+    }
+</code></pre><h3><a class=anchor aria-hidden=true id=request-single-metrics></a><a class=hash-link aria-hidden=true href=#request-single-metrics><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Request single metrics</h3><p>It is possible to require a few metrics instead all the ones inside a given projection. This way, the response time can be drastically reduced as GatherStar servers doesn't need to compute every single metric.</p><h4><a class=anchor aria-hidden=true id=example-14></a><a class=hash-link aria-hidden=true href=#example-14><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example:</h4><pre><code class="hljs css language-json">{
+  <span class=hljs-attr>"projection"</span>: {
+    <span class=hljs-attr>"video"</span>: [
+      <span class=hljs-string>"views"</span>,
+      <span class=hljs-string>"vtr"</span>
+    ]
+  }
+}
+</code></pre><h4><a class=anchor aria-hidden=true id=possible-metrics></a><a class=hash-link aria-hidden=true href=#possible-metrics><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Possible metrics:</h4><table><thead><tr><th>Projection</th><th>Metrics</th></tr></thead><tbody><tr><td>base</td><td><code>impressions</code>, <code>clicks</code>, <code>cost</code>, <code>cpc</code>, <code>margin</code>, <code>cpm</code>, <code>ctr</code>, <code>network_revenue</code><sup>1</sup>, <code>publisher_revenue</code><sup>1</sup>, <code>revenue</code>, <code>ad_requests</code>, <code>fill_rate</code>, <code>ad_requests_rpm</code></td></tr><tr><td>video</td><td><code>impressions</code>, <code>views</code>, <code>cpv</code>, <code>vtr</code></td></tr><tr><td>wpn</td><td><code>sent</code>, <code>subscriptions</code>, <code>unsubscriptions</code></td></tr><tr><td>rtb<sup>2</sup></td><td><code>avg_total_time</code>, <code>avg_cpm</code>, <code>bid_response_ratio</code>, <code>errors</code>, <code>errors_ratio</code>, <code>no_bid</code>, <code>no_bid_ratio</code>, <code>queries</code>, <code>skipped</code>, <code>skipped_ratio</code>, <code>success</code>, <code>timeouts</code>, <code>timeouts_ratio</code>, <code>total_time</code>, <code>value</code>, <code>win_ratio</code>, <code>wins</code></td></tr></tbody></table><p><small><sup>1</sup> Available only for Network Users;<br><sup>2</sup> Also available Network Users with <code>adv_</code> and <code>pub_</code> prefixes (for Advertiser and Publisher, respectively).</small></p><p> </p><h2><a class=anchor aria-hidden=true id=parameter-limit></a><a class=hash-link aria-hidden=true href=#parameter-limit><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Parameter limit</h2><p>The number of records to return in this response.</p><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Property</td><td>limit</td></tr><tr><td>Type</td><td>optional</td></tr><tr><td>Variable type</td><td>integer</td></tr><tr><td>Default Value</td><td>50</td></tr></tbody></table><p> </p><h4><a class=anchor aria-hidden=true id=example-15></a><a class=hash-link aria-hidden=true href=#example-15><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example:</h4><pre><code class=hljs>{
+      <span class=hljs-attr>"limit"</span>: <span class=hljs-number>25</span>
+}
+</code></pre><p> </p><h2><a class=anchor aria-hidden=true id=parameter-offset></a><a class=hash-link aria-hidden=true href=#parameter-offset><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Parameter offset</h2><p>The position to retrieve the records from.</p><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Property</td><td>offset</td></tr><tr><td>Type</td><td>optional</td></tr><tr><td>Variable type</td><td>integer</td></tr><tr><td>Default Value</td><td>0</td></tr></tbody></table><p> </p><h4><a class=anchor aria-hidden=true id=example-16></a><a class=hash-link aria-hidden=true href=#example-16><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example</h4><pre><code class=hljs>    {
+      <span class=hljs-attr>"offset"</span>: <span class=hljs-number>150</span>
+    }
+</code></pre><p> </p><h2><a class=anchor aria-hidden=true id=example-1-1></a><a class=hash-link aria-hidden=true href=#example-1-1><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example 1</h2><p>Advertiser campaign statistic with filtering.</p><h4><a class=anchor aria-hidden=true id=request></a><a class=hash-link aria-hidden=true href=#request><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Request:</h4><pre><code class=hljs>{
+      <span class=hljs-attr>"detailed"</span>: <span class=hljs-literal>true</span>,
+      <span class=hljs-attr>"totals"</span>: <span class=hljs-number>1</span>,
+      <span class=hljs-attr>"filter"</span>: {
+        <span class=hljs-attr>"date_from"</span>: <span class=hljs-string>"2019-03-10"</span>,
+        <span class=hljs-attr>"date_to"</span>: <span class=hljs-string>"2019-03-11"</span>,
+        <span class=hljs-attr>"country_iso"</span>: [<span class=hljs-string>"USA"</span>]
+      },
+      <span class=hljs-attr>"group_by"</span>: [<span class=hljs-string>"campaign_id"</span>],
+      <span class=hljs-attr>"order_by"</span>: [
+        {
+          <span class=hljs-attr>"field"</span>: <span class=hljs-string>"campaign_id"</span>,
+          <span class=hljs-attr>"order"</span>: <span class=hljs-string>"desc"</span>
+        }
+      ],
+      <span class=hljs-attr>"limit"</span>: <span class=hljs-number>2</span>,
+      <span class=hljs-attr>"offset"</span>: <span class=hljs-number>0</span>
+    }
+</code></pre><h3><a class=anchor aria-hidden=true id=response></a><a class=hash-link aria-hidden=true href=#response><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Response:</h3><pre><code class=hljs>    {
+      <span class=hljs-attr>"request_metadata"</span>: {
+        <span class=hljs-attr>"count"</span>: <span class=hljs-number>4</span>,
+        <span class=hljs-attr>"limit"</span>: <span class=hljs-number>2</span>,
+        <span class=hljs-attr>"offset"</span>: <span class=hljs-number>0</span>
+      },
+      <span class=hljs-attr>"result"</span>: [
+        {
+          <span class=hljs-attr>"clicks"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"cost"</span>: <span class=hljs-number>1.3302</span>,
+          <span class=hljs-attr>"cpc"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"cpm"</span>: <span class=hljs-number>0.45586017820425</span>,
+          <span class=hljs-attr>"ctr"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"group_by"</span>: {
+            <span class=hljs-attr>"campaign_id"</span>: {
+              <span class=hljs-attr>"active"</span>: <span class=hljs-string>"1"</span>,
+              <span class=hljs-attr>"campaign_ad_type_name"</span>: <span class=hljs-string>"Popunders"</span>,
+              <span class=hljs-attr>"id"</span>: <span class=hljs-string>"1234567"</span>,
+              <span class=hljs-attr>"name"</span>: <span class=hljs-string>"Ron Mainstream Campaign "</span>
+            }
+          },
+          <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>2918</span>,
+          <span class=hljs-attr>"rtb"</span>: {
+            <span class=hljs-attr>"avg_cpm"</span>: <span class=hljs-number>0.15582967823432</span>,
+            <span class=hljs-attr>"avg_total_time"</span>: <span class=hljs-number>89.522714492492</span>,
+            <span class=hljs-attr>"errors"</span>: <span class=hljs-number>112</span>,
+            <span class=hljs-attr>"errors_ratio"</span>: <span class=hljs-number>0.011368411650186</span>,
+            <span class=hljs-attr>"no_bid"</span>: <span class=hljs-number>870594</span>,
+            <span class=hljs-attr>"no_bid_ratio"</span>: <span class=hljs-number>88.368490823053</span>,
+            <span class=hljs-attr>"queries"</span>: <span class=hljs-number>985186</span>,
+            <span class=hljs-attr>"response_ratio"</span>: <span class=hljs-number>11.57101298638</span>,
+            <span class=hljs-attr>"skipped"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"skipped_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"success"</span>: <span class=hljs-number>984590</span>,
+            <span class=hljs-attr>"timeouts"</span>: <span class=hljs-number>484</span>,
+            <span class=hljs-attr>"timeouts_ratio"</span>: <span class=hljs-number>0.049127778916875</span>,
+            <span class=hljs-attr>"total_time"</span>: <span class=hljs-number>88196525</span>,
+            <span class=hljs-attr>"value"</span>: <span class=hljs-number>1776.396</span>,
+            <span class=hljs-attr>"win_ratio"</span>: <span class=hljs-number>0.29842080581738</span>,
+            <span class=hljs-attr>"wins"</span>: <span class=hljs-number>2940</span>
+          },
+          <span class=hljs-attr>"video"</span>: {
+            <span class=hljs-attr>"cpv"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"views"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"vtr"</span>: <span class=hljs-number>0</span>
+          }
+        },
+        {
+          <span class=hljs-attr>"clicks"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"cost"</span>: <span class=hljs-number>18.1621655</span>,
+          <span class=hljs-attr>"cpc"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"cpm"</span>: <span class=hljs-number>1.8273634671496</span>,
+          <span class=hljs-attr>"ctr"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"group_by"</span>: {
+            <span class=hljs-attr>"campaign_id"</span>: {
+              <span class=hljs-attr>"active"</span>: <span class=hljs-string>"1"</span>,
+              <span class=hljs-attr>"campaign_ad_type_name"</span>: <span class=hljs-string>"Popunders"</span>,
+              <span class=hljs-attr>"id"</span>: <span class=hljs-string>"7654321"</span>,
+              <span class=hljs-attr>"name"</span>: <span class=hljs-string>"Ron Mainstream Campaign Test"</span>
+            }
+          },
+          <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>9939</span>,
+          <span class=hljs-attr>"rtb"</span>: {
+            <span class=hljs-attr>"avg_cpm"</span>: <span class=hljs-number>1.4753505300475</span>,
+            <span class=hljs-attr>"avg_total_time"</span>: <span class=hljs-number>88.777190144965</span>,
+            <span class=hljs-attr>"errors"</span>: <span class=hljs-number>46</span>,
+            <span class=hljs-attr>"errors_ratio"</span>: <span class=hljs-number>0.0014192869995779</span>,
+            <span class=hljs-attr>"no_bid"</span>: <span class=hljs-number>3209674</span>,
+            <span class=hljs-attr>"no_bid_ratio"</span>: <span class=hljs-number>99.031490893114</span>,
+            <span class=hljs-attr>"queries"</span>: <span class=hljs-number>3241064</span>,
+            <span class=hljs-attr>"response_ratio"</span>: <span class=hljs-number>0.8964340105595</span>,
+            <span class=hljs-attr>"skipped"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"skipped_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"success"</span>: <span class=hljs-number>3238728</span>,
+            <span class=hljs-attr>"timeouts"</span>: <span class=hljs-number>2290</span>,
+            <span class=hljs-attr>"timeouts_ratio"</span>: <span class=hljs-number>0.070655809326814</span>,
+            <span class=hljs-attr>"total_time"</span>: <span class=hljs-number>287732555</span>,
+            <span class=hljs-attr>"value"</span>: <span class=hljs-number>4286.48343</span>,
+            <span class=hljs-attr>"win_ratio"</span>: <span class=hljs-number>0.30665855410445</span>,
+            <span class=hljs-attr>"wins"</span>: <span class=hljs-number>9939</span>
+          },
+          <span class=hljs-attr>"video"</span>: {
+            <span class=hljs-attr>"cpv"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"views"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"vtr"</span>: <span class=hljs-number>0</span>
+          }
+        }
+      ],
+      <span class=hljs-attr>"result_total"</span>: {
+        <span class=hljs-attr>"clicks"</span>: <span class=hljs-number>0</span>,
+        <span class=hljs-attr>"cost"</span>: <span class=hljs-number>74.0473595</span>,
+        <span class=hljs-attr>"cpc"</span>: <span class=hljs-number>0</span>,
+        <span class=hljs-attr>"cpm"</span>: <span class=hljs-number>2.0864288391096</span>,
+        <span class=hljs-attr>"ctr"</span>: <span class=hljs-number>0</span>,
+        <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>35490</span>,
+        <span class=hljs-attr>"rtb"</span>: {
+          <span class=hljs-attr>"avg_cpm"</span>: <span class=hljs-number>0.23441613972984</span>,
+          <span class=hljs-attr>"avg_total_time"</span>: <span class=hljs-number>87.995789332859</span>,
+          <span class=hljs-attr>"errors"</span>: <span class=hljs-number>539</span>,
+          <span class=hljs-attr>"errors_ratio"</span>: <span class=hljs-number>0.0049868154705264</span>,
+          <span class=hljs-attr>"no_bid"</span>: <span class=hljs-number>9771471</span>,
+          <span class=hljs-attr>"no_bid_ratio"</span>: <span class=hljs-number>90.405422546568</span>,
+          <span class=hljs-attr>"queries"</span>: <span class=hljs-number>10808501</span>,
+          <span class=hljs-attr>"response_ratio"</span>: <span class=hljs-number>9.5135301370653</span>,
+          <span class=hljs-attr>"skipped"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"skipped_ratio"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"success"</span>: <span class=hljs-number>10799741</span>,
+          <span class=hljs-attr>"timeouts"</span>: <span class=hljs-number>8221</span>,
+          <span class=hljs-attr>"timeouts_ratio"</span>: <span class=hljs-number>0.07606050089647</span>,
+          <span class=hljs-attr>"total_time"</span>: <span class=hljs-number>951102577</span>,
+          <span class=hljs-attr>"win_ratio"</span>: <span class=hljs-number>0.32861171035651</span>,
+          <span class=hljs-attr>"wins"</span>: <span class=hljs-number>35518</span>
+        },
+        <span class=hljs-attr>"video"</span>: {
+          <span class=hljs-attr>"cpv"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"views"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"vtr"</span>: <span class=hljs-number>0</span>
+        }
+      }
+    }
+</code></pre><p> </p><h3><a class=anchor aria-hidden=true id=example-2-1></a><a class=hash-link aria-hidden=true href=#example-2-1><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example 2</h3><p>Advertiser statistic by date for the current month ordered by impressions.</p><p> </p><h5><a class=anchor aria-hidden=true id=request-1></a><a class=hash-link aria-hidden=true href=#request-1><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Request:</h5><pre><code class=hljs>    {
+      <span class=hljs-attr>"group_by"</span>: [<span class=hljs-string>"date"</span>],
+      <span class=hljs-attr>"order_by"</span>: [
+        {
+          <span class=hljs-attr>"field"</span>: <span class=hljs-string>"impressions"</span>,
+          <span class=hljs-attr>"order"</span>: <span class=hljs-string>"desc"</span>
+        }
+      ]
+    }
+</code></pre><p> </p><h5><a class=anchor aria-hidden=true id=response-1></a><a class=hash-link aria-hidden=true href=#response-1><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Response:</h5><pre><code class=hljs>    {
+      <span class=hljs-attr>"request_metadata"</span>: {
+        <span class=hljs-attr>"count"</span>: <span class=hljs-number>3</span>,
+        <span class=hljs-attr>"limit"</span>: <span class=hljs-number>50</span>,
+        <span class=hljs-attr>"offset"</span>: <span class=hljs-number>0</span>
+      },
+      <span class=hljs-attr>"result"</span>: [
+        {
+          <span class=hljs-attr>"clicks"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"cost"</span>: <span class=hljs-number>624.2439917</span>,
+          <span class=hljs-attr>"cpc"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"cpm"</span>: <span class=hljs-number>1.0978015474007</span>,
+          <span class=hljs-attr>"ctr"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"group_by"</span>: {
+            <span class=hljs-attr>"date"</span>: {
+              <span class=hljs-attr>"date"</span>: <span class=hljs-string>"2019-03-02"</span>
+            }
+          },
+          <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>568631</span>,
+          <span class=hljs-attr>"rtb"</span>: {
+            <span class=hljs-attr>"avg_cpm"</span>: <span class=hljs-number>0.31273156270632</span>,
+            <span class=hljs-attr>"avg_total_time"</span>: <span class=hljs-number>114.34705591799</span>,
+            <span class=hljs-attr>"errors"</span>: <span class=hljs-number>4143</span>,
+            <span class=hljs-attr>"errors_ratio"</span>: <span class=hljs-number>0.0076578188576312</span>,
+            <span class=hljs-attr>"no_bid"</span>: <span class=hljs-number>48085697</span>,
+            <span class=hljs-attr>"no_bid_ratio"</span>: <span class=hljs-number>88.8804144989</span>,
+            <span class=hljs-attr>"queries"</span>: <span class=hljs-number>54101567</span>,
+            <span class=hljs-attr>"response_ratio"</span>: <span class=hljs-number>10.971772776933</span>,
+            <span class=hljs-attr>"skipped"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"skipped_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"success"</span>: <span class=hljs-number>54021598</span>,
+            <span class=hljs-attr>"timeouts"</span>: <span class=hljs-number>75826</span>,
+            <span class=hljs-attr>"timeouts_ratio"</span>: <span class=hljs-number>0.14015490530986</span>,
+            <span class=hljs-attr>"total_time"</span>: <span class=hljs-number>6186354907</span>,
+            <span class=hljs-attr>"value"</span>: <span class=hljs-number>185634.35958</span>,
+            <span class=hljs-attr>"win_ratio"</span>: <span class=hljs-number>1.1633248996281</span>,
+            <span class=hljs-attr>"wins"</span>: <span class=hljs-number>629377</span>
+          },
+          <span class=hljs-attr>"video"</span>: {
+            <span class=hljs-attr>"cpv"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"views"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"vtr"</span>: <span class=hljs-number>0</span>
+          }
+        },
+        {
+          <span class=hljs-attr>"clicks"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"cost"</span>: <span class=hljs-number>622.1688691</span>,
+          <span class=hljs-attr>"cpc"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"cpm"</span>: <span class=hljs-number>1.1800128762878</span>,
+          <span class=hljs-attr>"ctr"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"group_by"</span>: {
+            <span class=hljs-attr>"date"</span>: {
+              <span class=hljs-attr>"date"</span>: <span class=hljs-string>"2019-03-01"</span>
+            }
+          },
+          <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>527256</span>,
+          <span class=hljs-attr>"rtb"</span>: {
+            <span class=hljs-attr>"avg_cpm"</span>: <span class=hljs-number>0.27775587567531</span>,
+            <span class=hljs-attr>"avg_total_time"</span>: <span class=hljs-number>118.91585420372</span>,
+            <span class=hljs-attr>"errors"</span>: <span class=hljs-number>2954</span>,
+            <span class=hljs-attr>"errors_ratio"</span>: <span class=hljs-number>0.0078196779097434</span>,
+            <span class=hljs-attr>"no_bid"</span>: <span class=hljs-number>32641750</span>,
+            <span class=hljs-attr>"no_bid_ratio"</span>: <span class=hljs-number>86.407573260111</span>,
+            <span class=hljs-attr>"queries"</span>: <span class=hljs-number>37776492</span>,
+            <span class=hljs-attr>"response_ratio"</span>: <span class=hljs-number>13.412992397494</span>,
+            <span class=hljs-attr>"skipped"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"skipped_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"success"</span>: <span class=hljs-number>37708708</span>,
+            <span class=hljs-attr>"timeouts"</span>: <span class=hljs-number>64830</span>,
+            <span class=hljs-attr>"timeouts_ratio"</span>: <span class=hljs-number>0.17161466448499</span>,
+            <span class=hljs-attr>"total_time"</span>: <span class=hljs-number>4492223815</span>,
+            <span class=hljs-attr>"value"</span>: <span class=hljs-number>140737.73563</span>,
+            <span class=hljs-attr>"win_ratio"</span>: <span class=hljs-number>1.4077723257099</span>,
+            <span class=hljs-attr>"wins"</span>: <span class=hljs-number>531807</span>
+          },
+          <span class=hljs-attr>"video"</span>: {
+            <span class=hljs-attr>"cpv"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"views"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"vtr"</span>: <span class=hljs-number>0</span>
+          }
+        },
+        {
+          <span class=hljs-attr>"clicks"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"cost"</span>: <span class=hljs-number>441.843491</span>,
+          <span class=hljs-attr>"cpc"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"cpm"</span>: <span class=hljs-number>0.96186339096399</span>,
+          <span class=hljs-attr>"ctr"</span>: <span class=hljs-number>0</span>,
+          <span class=hljs-attr>"group_by"</span>: {
+            <span class=hljs-attr>"date"</span>: {
+              <span class=hljs-attr>"date"</span>: <span class=hljs-string>"2019-03-03"</span>
+            }
+          },
+          <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>459362</span>,
+          <span class=hljs-attr>"rtb"</span>: {
+            <span class=hljs-attr>"avg_cpm"</span>: <span class=hljs-number>0.26462497173837</span>,
+            <span class=hljs-attr>"avg_total_time"</span>: <span class=hljs-number>116.9210100884</span>,
+            <span class=hljs-attr>"errors"</span>: <span class=hljs-number>2183</span>,
+            <span class=hljs-attr>"errors_ratio"</span>: <span class=hljs-number>0.0059889808787451</span>,
+            <span class=hljs-attr>"no_bid"</span>: <span class=hljs-number>32174177</span>,
+            <span class=hljs-attr>"no_bid_ratio"</span>: <span class=hljs-number>88.268681100486</span>,
+            <span class=hljs-attr>"queries"</span>: <span class=hljs-number>36450275</span>,
+            <span class=hljs-attr>"response_ratio"</span>: <span class=hljs-number>11.500815837466</span>,
+            <span class=hljs-attr>"skipped"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"skipped_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"success"</span>: <span class=hljs-number>36366256</span>,
+            <span class=hljs-attr>"timeouts"</span>: <span class=hljs-number>81836</span>,
+            <span class=hljs-attr>"timeouts_ratio"</span>: <span class=hljs-number>0.22451408116948</span>,
+            <span class=hljs-attr>"total_time"</span>: <span class=hljs-number>4261802971</span>,
+            <span class=hljs-attr>"value"</span>: <span class=hljs-number>110932.87869</span>,
+            <span class=hljs-attr>"win_ratio"</span>: <span class=hljs-number>1.2852029237091</span>,
+            <span class=hljs-attr>"wins"</span>: <span class=hljs-number>468460</span>
+          },
+          <span class=hljs-attr>"video"</span>: {
+            <span class=hljs-attr>"cpv"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"views"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"vtr"</span>: <span class=hljs-number>0</span>
+          }
+        }
+      ]
+    }
+</code></pre><p> </p><h3><a class=anchor aria-hidden=true id=example-3-1></a><a class=hash-link aria-hidden=true href=#example-3-1><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example 3</h3><p>Publisher statistic by date and region_id, ordered by impressions.</p><p>Request:</p><pre><code class=hljs>{
+      <span class=hljs-attr>"detailed"</span>: <span class=hljs-literal>true</span>,
+      <span class=hljs-attr>"filter"</span>: {
+        <span class=hljs-attr>"date_from"</span>: <span class=hljs-string>"2019-03-10"</span>,
+        <span class=hljs-attr>"date_to"</span>: <span class=hljs-string>"2019-03-11"</span>,
+        <span class=hljs-attr>"country_iso"</span>: [<span class=hljs-string>"USA"</span>]
+      },
+      <span class=hljs-attr>"group_by"</span>: [<span class=hljs-string>"date"</span>, <span class=hljs-string>"region_id"</span>],
+      <span class=hljs-attr>"order_by"</span>: [
+        {
+          <span class=hljs-attr>"field"</span>: <span class=hljs-string>"impressions"</span>,
+          <span class=hljs-attr>"order"</span>: <span class=hljs-string>"desc"</span>
+        }
+      ],
+      <span class=hljs-attr>"limit"</span>: <span class=hljs-number>30</span>,
+      <span class=hljs-attr>"offset"</span>: <span class=hljs-number>0</span>
+    }
+</code></pre><p>Response:</p><pre><code class=hljs>    {
+      <span class=hljs-attr>"request_metadata"</span>: {
+        <span class=hljs-attr>"count"</span>: <span class=hljs-number>2</span>,
+        <span class=hljs-attr>"limit"</span>: <span class=hljs-number>30</span>,
+        <span class=hljs-attr>"offset"</span>: <span class=hljs-number>0</span>
+      },
+      <span class=hljs-attr>"result"</span>: [
+        {
+          <span class=hljs-attr>"clicks"</span>: <span class=hljs-number>3087</span>,
+          <span class=hljs-attr>"cpc"</span>: <span class=hljs-number>0.033842716164561</span>,
+          <span class=hljs-attr>"cpm"</span>: <span class=hljs-number>0.069188574849649</span>,
+          <span class=hljs-attr>"ctr"</span>: <span class=hljs-number>0.20444155402072</span>,
+          <span class=hljs-attr>"group_by"</span>: {
+            <span class=hljs-attr>"date"</span>: {
+              <span class=hljs-attr>"date"</span>: <span class=hljs-string>"2019-03-11"</span>
+            },
+            <span class=hljs-attr>"region_id"</span>: {
+              <span class=hljs-attr>"country_iso"</span>: <span class=hljs-string>"USA"</span>,
+              <span class=hljs-attr>"country_long_name"</span>: <span class=hljs-string>"United States of America"</span>,
+              <span class=hljs-attr>"country_short_name"</span>: <span class=hljs-string>"United States"</span>,
+              <span class=hljs-attr>"id"</span>: <span class=hljs-number>5332921</span>,
+              <span class=hljs-attr>"name"</span>: <span class=hljs-string>"California"</span>
+            }
+          },
+          <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>1494954</span>,
+          <span class=hljs-attr>"revenue"</span>: <span class=hljs-number>104.4724648</span>,
+          <span class=hljs-attr>"rtb"</span>: {
+            <span class=hljs-attr>"avg_cpm"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"avg_total_time"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"bid_response_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"errors"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"errors_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"no_bid"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"no_bid_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"queries"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"skipped"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"skipped_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"success"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"timeouts"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"timeouts_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"total_time"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"value"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"win_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"wins"</span>: <span class=hljs-number>0</span>
+          },
+          <span class=hljs-attr>"video"</span>: {
+            <span class=hljs-attr>"cpv"</span>: <span class=hljs-number>0.038451404048583</span>,
+            <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>15013</span>,
+            <span class=hljs-attr>"views"</span>: <span class=hljs-number>2717</span>,
+            <span class=hljs-attr>"vtr"</span>: <span class=hljs-number>18.097648704456</span>
+          },
+          <span class=hljs-attr>"wpn"</span>: {
+            <span class=hljs-attr>"subscriptions"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"unsubscriptions"</span>: <span class=hljs-number>0</span>
+          }
+        },
+        {
+          <span class=hljs-attr>"clicks"</span>: <span class=hljs-number>3071</span>,
+          <span class=hljs-attr>"cpc"</span>: <span class=hljs-number>0.03151133555845</span>,
+          <span class=hljs-attr>"cpm"</span>: <span class=hljs-number>0.066658890819906</span>,
+          <span class=hljs-attr>"ctr"</span>: <span class=hljs-number>0.21153940205505</span>,
+          <span class=hljs-attr>"group_by"</span>: {
+            <span class=hljs-attr>"date"</span>: {
+              <span class=hljs-attr>"date"</span>: <span class=hljs-string>"2019-03-10"</span>
+            },
+            <span class=hljs-attr>"region_id"</span>: {
+              <span class=hljs-attr>"country_iso"</span>: <span class=hljs-string>"USA"</span>,
+              <span class=hljs-attr>"country_long_name"</span>: <span class=hljs-string>"United States of America"</span>,
+              <span class=hljs-attr>"country_short_name"</span>: <span class=hljs-string>"United States"</span>,
+              <span class=hljs-attr>"id"</span>: <span class=hljs-number>5332921</span>,
+              <span class=hljs-attr>"name"</span>: <span class=hljs-string>"California"</span>
+            }
+          },
+          <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>1436818</span>,
+          <span class=hljs-attr>"revenue"</span>: <span class=hljs-number>96.7713115</span>,
+          <span class=hljs-attr>"rtb"</span>: {
+            <span class=hljs-attr>"avg_cpm"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"avg_total_time"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"bid_response_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"errors"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"errors_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"no_bid"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"no_bid_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"queries"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"skipped"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"skipped_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"success"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"timeouts"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"timeouts_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"total_time"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"value"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"win_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"wins"</span>: <span class=hljs-number>0</span>
+          },
+          <span class=hljs-attr>"video"</span>: {
+            <span class=hljs-attr>"cpv"</span>: <span class=hljs-number>0.036216808196108</span>,
+            <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>14921</span>,
+            <span class=hljs-attr>"views"</span>: <span class=hljs-number>2672</span>,
+            <span class=hljs-attr>"vtr"</span>: <span class=hljs-number>17.907646940554</span>
+          },
+          <span class=hljs-attr>"wpn"</span>: {
+            <span class=hljs-attr>"subscriptions"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"unsubscriptions"</span>: <span class=hljs-number>0</span>
+          }
+        }
+      ]
+    }
+</code></pre><p> </p><h4><a class=anchor aria-hidden=true id=example-4-1></a><a class=hash-link aria-hidden=true href=#example-4-1><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example 4</h4><p>Publisher statistic by site_id with projection.</p><p> </p><h5><a class=anchor aria-hidden=true id=request-2></a><a class=hash-link aria-hidden=true href=#request-2><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Request:</h5><pre><code class=hljs>{
+      <span class=hljs-attr>"detailed"</span>: <span class=hljs-literal>true</span>,
+      <span class=hljs-attr>"projection"</span>: [<span class=hljs-string>"wpn"</span>, <span class=hljs-string>"video"</span>, <span class=hljs-string>"rtb"</span>],
+      <span class=hljs-attr>"filter"</span>: {
+        <span class=hljs-attr>"date_from"</span>: <span class=hljs-string>"2019-03-10"</span>,
+        <span class=hljs-attr>"date_to"</span>: <span class=hljs-string>"2019-03-11"</span>,
+        <span class=hljs-attr>"country_iso"</span>: [<span class=hljs-string>"USA"</span>]
+      },
+      <span class=hljs-attr>"group_by"</span>: [<span class=hljs-string>"site_id"</span>],
+      <span class=hljs-attr>"order_by"</span>: [
+        {
+          <span class=hljs-attr>"field"</span>: <span class=hljs-string>"impressions"</span>,
+          <span class=hljs-attr>"order"</span>: <span class=hljs-string>"desc"</span>
+        }
+      ],
+      <span class=hljs-attr>"limit"</span>: <span class=hljs-number>30</span>,
+      <span class=hljs-attr>"offset"</span>: <span class=hljs-number>0</span>
+    }
+</code></pre><p> </p><h5><a class=anchor aria-hidden=true id=response-2></a><a class=hash-link aria-hidden=true href=#response-2><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Response</h5><pre><code class=hljs>{
+      <span class=hljs-attr>"request_metadata"</span>: {
+        <span class=hljs-attr>"count"</span>: <span class=hljs-number>2</span>,
+        <span class=hljs-attr>"limit"</span>: <span class=hljs-number>30</span>,
+        <span class=hljs-attr>"offset"</span>: <span class=hljs-number>0</span>
+      },
+      <span class=hljs-attr>"result"</span>: [
+        {
+          <span class=hljs-attr>"clicks"</span>: <span class=hljs-number>14320</span>,
+          <span class=hljs-attr>"cpc"</span>: <span class=hljs-number>0.028298959692737</span>,
+          <span class=hljs-attr>"cpm"</span>: <span class=hljs-number>0.057945765404939</span>,
+          <span class=hljs-attr>"ctr"</span>: <span class=hljs-number>0.20476288186597</span>,
+          <span class=hljs-attr>"group_by"</span>: {
+            <span class=hljs-attr>"site_id"</span>: {
+              <span class=hljs-attr>"id"</span>: <span class=hljs-string>"11223344"</span>,
+              <span class=hljs-attr>"name"</span>: <span class=hljs-string>"nice-example.com"</span>
+            }
+          },
+          <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>6916414</span>,
+          <span class=hljs-attr>"revenue"</span>: <span class=hljs-number>405.2411028</span>,
+          <span class=hljs-attr>"rtb"</span>: {
+            <span class=hljs-attr>"avg_cpm"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"avg_total_time"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"bid_response_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"errors"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"errors_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"no_bid"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"no_bid_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"queries"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"skipped"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"skipped_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"success"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"timeouts"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"timeouts_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"total_time"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"value"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"win_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"wins"</span>: <span class=hljs-number>0</span>
+          },
+          <span class=hljs-attr>"video"</span>: {
+            <span class=hljs-attr>"cpv"</span>: <span class=hljs-number>0.031519102652252</span>,
+            <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>77041</span>,
+            <span class=hljs-attr>"views"</span>: <span class=hljs-number>12857</span>,
+            <span class=hljs-attr>"vtr"</span>: <span class=hljs-number>16.688516504199</span>
+          },
+          <span class=hljs-attr>"wpn"</span>: {
+            <span class=hljs-attr>"subscriptions"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"unsubscriptions"</span>: <span class=hljs-number>0</span>
+          }
+        },
+        {
+          <span class=hljs-attr>"clicks"</span>: <span class=hljs-number>14148</span>,
+          <span class=hljs-attr>"cpc"</span>: <span class=hljs-number>0.028769196296296</span>,
+          <span class=hljs-attr>"cpm"</span>: <span class=hljs-number>0.063791981699323</span>,
+          <span class=hljs-attr>"ctr"</span>: <span class=hljs-number>0.22173710048179</span>,
+          <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>6314909</span>,
+          <span class=hljs-attr>"revenue"</span>: <span class=hljs-number>407.0265892</span>,
+          <span class=hljs-attr>"rtb"</span>: {
+            <span class=hljs-attr>"avg_cpm"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"avg_total_time"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"bid_response_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"errors"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"errors_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"no_bid"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"no_bid_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"queries"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"skipped"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"skipped_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"success"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"timeouts"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"timeouts_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"total_time"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"value"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"win_ratio"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"wins"</span>: <span class=hljs-number>0</span>
+          },
+          <span class=hljs-attr>"video"</span>: {
+            <span class=hljs-attr>"cpv"</span>: <span class=hljs-number>0.036406671663685</span>,
+            <span class=hljs-attr>"impressions"</span>: <span class=hljs-number>65620</span>,
+            <span class=hljs-attr>"views"</span>: <span class=hljs-number>11180</span>,
+            <span class=hljs-attr>"vtr"</span>: <span class=hljs-number>17.037488570558</span>
+          },
+          <span class=hljs-attr>"wpn"</span>: {
+            <span class=hljs-attr>"subscriptions"</span>: <span class=hljs-number>0</span>,
+            <span class=hljs-attr>"unsubscriptions"</span>: <span class=hljs-number>0</span>
+          }
+        }
+      ]
+    }
+</code></pre></span></div></article></div><div class=docs-prevnext><a class="button docs-prev" href=../api-manual-rate-limiting/index.html><span class=arrow-prev>← </span><span>Rate Limiting</span></a><a class="button docs-next" href=../api-manual-changelog.html><span>Next</span><span class=arrow-next> →</span></a></div></div></div><nav class=onPageNav><ul class=toc-headings><li><a href=#parameter-count>Parameter count</a></li><li><a href=#parameter-detailed>Parameter detailed</a></li><li><a href=#parameter-timezone>Parameter timezone</a></li><li><a href=#parameter-totals>Parameter totals</a></li><li><a href=#parameter-filter>Parameter filter</a><ul class=toc-headings><li><a href=#filter-country_iso>Filter: <code>country_iso</code></a></li><li><a href=#filter-date_from-date_to>Filter <code>date_from</code>, <code>date_to</code></a></li><li><a href=#filter-advertiser_ad_type_id-campaign_id-browser_id-carrier_id-category_id-device_id-device_type_id-language_id-offer_id-offer_landing_page_id-operating_system_id-hour-region_id-site_id-sub-variation_id-zone_id-publisher_ad_type_id>Filter: advertiser_ad_type_id, campaign_id, browser_id, carrier_id, category_id, device_id, device_type_id, language_id, offer_id, offer_landing_page_id, operating_system_id, hour, region_id, site_id, sub, variation_id, zone_id, publisher_ad_type_id</a></li><li><a href=#filter-exclude_deleted>Filter: <code>exclude_deleted</code></a></li><li><a href=#filter-adblock>Filter: <code>adblock</code></a></li><li><a href=#filter-site_hostname>Filter: <code>site_hostname</code></a></li><li><a href=#filter-size>Filter: <code>size</code></a></li></ul></li><li><a href=#parameter-group_by>Parameter group_by</a></li><li><a href=#parameter-order_by>Parameter order_by</a></li><li><a href=#parameter-projection>Parameter projection</a><ul class=toc-headings><li><a href=#request-single-metrics>Request single metrics</a></li></ul></li><li><a href=#parameter-limit>Parameter limit</a></li><li><a href=#parameter-offset>Parameter offset</a></li><li><a href=#example-1-1>Example 1</a><ul class=toc-headings><li><a href=#response>Response:</a></li><li><a href=#example-2-1>Example 2</a></li><li><a href=#example-3-1>Example 3</a></li></ul></li></ul></nav></div><footer class=nav-footer id=footer style=display:none><section class=sitemap><a class=nav-home href=../../index.html><img alt=Documentation src=../../img/exads.svg height=58 width=66 /></a><div></div><div><h5>Community</h5><a href=https://github.com/GatherStar target=_blank rel="noreferrer noopener">Github</a></div><div><h5>Useful Links</h5><a href=https://www.exads.com/ target=_blank>GatherStar</a></div></section><section class=copyright>Copyright © 2025 GatherStar</section></footer></div><script src=../../../cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js></script><script>document.addEventListener("keyup",function(e){if(e.target===document.body&&191===e.keyCode){const e=document.getElementById("search_input_react");e&&e.focus()}});</script><script>docsearch({appId:"2PYAVRHSND",apiKey:"e7e7cec138ad66530a6fb8a42c66b8ce",indexName:"exads",inputSelector:"#search_input_react",algoliaOptions:{}});</script></body></html>

@@ -1,0 +1,756 @@
+<!DOCTYPE html><html lang=en><head><meta charSet=utf-8 /><meta content="IE=edge" http-equiv=X-UA-Compatible /><title>PHP Examples · Documentation</title><meta content="width=device-width,initial-scale=1" name=viewport /><meta content=Docusaurus name=generator /><meta content=&amp;nbsp; name=description /><meta content=en name=docsearch:language /><meta content="PHP Examples · Documentation" property=og:title /><meta content=website property=og:type /><meta content=../../index.html property=og:url /><meta content=&amp;nbsp; property=og:description /><meta content=../../img/docusaurus.html property=og:image /><meta content=summary name=twitter:card /><meta content=../../img/docusaurus.html name=twitter:image /><link href=../../img/favicon.png rel="shortcut icon"/><link href=../../../cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css rel=stylesheet /><link href=../../../cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css rel=stylesheet /><script src=../../../cdn.cookielaw.org/consent/ddf2749f-45af-42cb-91a1-cca420436707/OtAutoBlock.js></script><script src=../../js/cookielaw.js></script><script src=../../js/postback.js></script><script src=../../../cdn.cookielaw.org/scripttemplates/otSDKStub.js data-domain-script=ddf2749f-45af-42cb-91a1-cca420436707></script><script src=../../js/scrollSpy.js></script><link href=../../css/main.css rel=stylesheet /><script src=../../js/codetabs.js></script></head><body class="separateOnPageNav sideNavVisible"><div class=fixedHeaderContainer style=background:#0077fd><div class="wrapper headerWrapper"><header><a href=../../index.html><img alt=Documentation src=../../img/exads.svg class=logo /><h2 class=headerTitleWithLogo>Documentation</h2></a><div class="navigationSlider navigationWrapper"><nav class=slidingNav><ul class="nav-site nav-site-internal"><li class=""><a href=../introduction/index.html target=_self>General</a></li><li class=""><a href=../advertisers-introduction/index.html target=_self>Advertisers</a></li><li class=""><a href=../publishers-introduction/index.html target=_self>Publishers</a></li><li class=""><a href=../rtb-demand/index.html target=_self>RTB</a></li><li class=siteNavGroupActive><a href=../api-manual-overview/index.html target=_self>API</a></li><li class=""><a href=../api-manual-overview/index.html target=_self></a></li><li class=""><a target=_self></a></li><li class="navSearchWrapper reactNavSearchWrapper" style=display:none!important><input id=search_input_react placeholder=Search title=Search type=text /></li></ul></nav></div></header></div></div><div class=navPusher><div class="wrapper docMainWrapper"><div class=docsNavContainer id=docsNav><nav class=toc><div class=toggleNav><section class="wrapper navWrapper"><div class="wrapper navBreadcrumb"><div class=navToggle id=navToggler><div class=hamburger-menu><div class=line1></div><div class=line2></div><div class=line3></div></div></div><h2><i>›</i><span>GatherStar Public API</span></h2><div class=tocToggler id=tocToggler><i class=icon-toc></i></div></div><div class=navGroups><div class=navGroup><h3 class="collapsible navGroupCategoryTitle">GatherStar Public API<span class=arrow><svg height=24 viewBox="0 0 24 24" width=24><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill=#565656></path><path d="M0 0h24v24H0z" fill=none></path></svg></span></h3><ul class=hide><li class=navListItem><a href=../api-manual-overview/index.html class=navItem>API Overview</a></li><li class=navListItem><a href=../developer-api/index.html class=navItem>Developer API</a></li><li class=navListItem><a href=../api-manual-versions/index.html class=navItem>Versions</a></li><li class=navListItem><a href=../api-manual-interface/index.html class=navItem>API Interface</a></li><li class=navListItem><a href=../api-manual-http-headers/index.html class=navItem>HTTP Headers</a></li><li class=navListItem><a href=../api-manual-http-verbs/index.html class=navItem>HTTP Verbs</a></li><li class=navListItem><a href=../api-manual-returned-data/index.html class=navItem>Returned Data Standard Types</a></li><li class=navListItem><a href=../api-manual-errors/index.html class=navItem>Errors</a></li><li class=navListItem><a href=../api-manual-macros/index.html class=navItem>Macros</a></li><li class=navListItem><a href=../api-manual-pagination/index.html class=navItem>Pagination</a></li><li class=navListItem><a href=../api-manual-rate-limiting/index.html class=navItem>Rate Limiting</a></li><li class=navListItem><a href=../api-manual-global-stats/index.html class=navItem>Global Statistics API</a></li><li class="navListItem navListItemActive"><a href=index.html class=navItem>PHP Examples</a></li></ul></div><div class=navGroup><h3 class="collapsible navGroupCategoryTitle">Ad Placement API<span class=arrow><svg height=24 viewBox="0 0 24 24" width=24><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill=#565656></path><path d="M0 0h24v24H0z" fill=none></path></svg></span></h3><ul class=hide><li class=navListItem><a href=../ad-placement-api-overview/index.html class=navItem>Ad Placement API Overview</a></li><li class=navListItem><a href=../ad-plac-request/index.html class=navItem>Request</a></li><li class=navListItem><a href=../ad-plac-response/index.html class=navItem>Response</a></li><li class=navListItem><a href=../ad-plac-errors/index.html class=navItem>Errors</a></li><li class=navListItem><a href=../ad-plac-error-examples/index.html class=navItem>Error Examples</a></li><li class=navListItem><a href=../ad-plac-renderers/index.html class=navItem>Renderers</a></li></ul></div><div class=navGroup><h3 class="collapsible navGroupCategoryTitle">Conversion Tracking API<span class=arrow><svg height=24 viewBox="0 0 24 24" width=24><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill=#565656></path><path d="M0 0h24v24H0z" fill=none></path></svg></span></h3><ul class=hide><li class=navListItem><a href=../conversion-tracking-api/index.html class=navItem>Conversion Tracking API</a></li></ul></div></div></section></div><script>for(var e=document.getElementsByClassName("collapsible"),t=!0,n=0;n<e.length;n++){var o=e[n].nextElementSibling.getElementsByTagName("*");if(t)for(var i=0;i<o.length;i++)if(o[i].classList.contains("navListItemActive")){e[n].nextElementSibling.classList.toggle("hide"),e[n].childNodes[1].classList.toggle("rotate"),t=!1;break}e[n].addEventListener("click",function(){this.childNodes[1].classList.toggle("rotate"),this.nextElementSibling.classList.toggle("hide")})}document.addEventListener("DOMContentLoaded",function(){t("#navToggler","#docsNav","docsSliderActive"),t("#tocToggler","body","tocActive");var e=document.querySelector(".toc-headings");function t(e,t,n){var o=document.querySelector(e),i=document.querySelector(t);o&&(o.onclick=function(e){e.preventDefault(),i.classList.toggle(n)})}e&&e.addEventListener("click",function(t){for(var n=t.target;n!==e;){if("A"===n.tagName){document.body.classList.remove("tocActive");break}n=n.parentNode}},!1)});</script></nav></div><div class="container docsContainer mainContainer"><div class=wrapper><div class=post><header class=postHeader><h1 class=postHeaderTitle id=__docusaurus>PHP Examples</h1></header><article><div><span><p> </p><h2><a class=anchor aria-hidden=true id=overview></a><a href=#overview class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Overview</h2><p>The code samples in this section all use the following classes.</p><p>The Request class uses <strong>cURL</strong> to make the requests to the API.</p><p>The Response class contains the API response and returned status code info.</p><pre><code class=hljs><span class=hljs-class><span class=hljs-keyword>class</span> <span class=hljs-title>Request</span> </span>{
+
+        <span class=hljs-comment>/**
+         * <span class=hljs-doctag>@var</span> resource
+         */</span>
+        <span class=hljs-keyword>protected</span> $_request;
+
+        <span class=hljs-comment>/**
+         * <span class=hljs-doctag>@var</span> integer
+         */</span>
+        <span class=hljs-keyword>protected</span> $_method;
+
+        <span class=hljs-comment>/**
+         * <span class=hljs-doctag>@var</span> string
+         */</span>
+        <span class=hljs-keyword>protected</span> $_url;
+
+        <span class=hljs-comment>/**
+         * <span class=hljs-doctag>@var</span> array
+         */</span>
+        <span class=hljs-keyword>protected</span> $_headers = <span class=hljs-keyword>array</span>(
+            <span class=hljs-string>'Content-type: application/json'</span>
+        );
+
+        <span class=hljs-comment>/**
+         * <span class=hljs-doctag>@var</span> string|array
+         */</span>
+        <span class=hljs-keyword>protected</span> $_params;
+
+        <span class=hljs-comment>/**
+         * <span class=hljs-doctag>@var</span> object Response
+         */</span>
+        <span class=hljs-keyword>protected</span> $_reponse;
+
+        <span class=hljs-comment>/**
+         * Constructor
+         *
+         * <span class=hljs-doctag>@param</span>   string      $url
+         * <span class=hljs-doctag>@param</span>   string      $method
+         * <span class=hljs-doctag>@param</span>   array       $params
+         */</span>
+        <span class=hljs-keyword>public</span> <span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>__construct</span><span class=hljs-params>($url, $method, $params = array<span class=hljs-params>()</span>)</span> </span>{
+
+            <span class=hljs-keyword>$this</span>-&gt;_url = $url;
+
+            <span class=hljs-comment>// Set the method</span>
+            <span class=hljs-keyword>$this</span>-&gt;_method = $method;
+
+            <span class=hljs-comment>// Set the params</span>
+            <span class=hljs-keyword>$this</span>-&gt;_params = $params;
+        }
+
+        <span class=hljs-comment>/**
+         * Determine the Request method
+         *
+         * <span class=hljs-doctag>@param</span>   string  $method
+         */</span>
+        <span class=hljs-keyword>private</span> <span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>setMethod</span><span class=hljs-params>()</span> </span>{
+
+            <span class=hljs-keyword>switch</span>(<span class=hljs-keyword>$this</span>-&gt;_method) {
+                <span class=hljs-keyword>case</span> <span class=hljs-string>'GET'</span>:
+                    <span class=hljs-keyword>break</span>;
+                <span class=hljs-keyword>case</span> <span class=hljs-string>'POST'</span>:
+                    curl_setopt(<span class=hljs-keyword>$this</span>-&gt;_request, CURLOPT_POST, <span class=hljs-number>1</span>);
+                    <span class=hljs-keyword>break</span>;
+                <span class=hljs-keyword>case</span> <span class=hljs-string>'PUT'</span>:
+                    curl_setopt(<span class=hljs-keyword>$this</span>-&gt;_request, CURLOPT_CUSTOMREQUEST, <span class=hljs-string>'PUT'</span>);
+                    <span class=hljs-keyword>break</span>;
+                <span class=hljs-keyword>case</span> <span class=hljs-string>'DELETE'</span>:
+                    curl_setopt(<span class=hljs-keyword>$this</span>-&gt;_request, CURLOPT_CUSTOMREQUEST, <span class=hljs-string>'DELETE'</span>);
+                    <span class=hljs-keyword>break</span>;
+            }
+        }
+
+        <span class=hljs-comment>/**
+         * Add authorization header
+         *
+         * <span class=hljs-doctag>@param</span>   string  $type
+         * <span class=hljs-doctag>@param</span>   string  $token
+         */</span>
+        <span class=hljs-keyword>public</span> <span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>setAuthorizationHeader</span><span class=hljs-params>($type, $token)</span> </span>{
+
+            $authorization = $type . <span class=hljs-string>' '</span> . $token;
+
+            <span class=hljs-keyword>$this</span>-&gt;_headers[] = <span class=hljs-string>'Authorization: '</span> . $authorization;
+        }
+
+        <span class=hljs-comment>/**
+         * Add body to request
+         */</span>
+        <span class=hljs-keyword>private</span> <span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>addBody</span><span class=hljs-params>()</span> </span>{
+
+            <span class=hljs-keyword>if</span>(<span class=hljs-keyword>$this</span>-&gt;_method != <span class=hljs-string>'GET'</span> &amp;&amp; <span class=hljs-keyword>empty</span>(<span class=hljs-keyword>$this</span>-&gt;_params) == <span class=hljs-keyword>false</span>) {
+
+                <span class=hljs-keyword>if</span>(is_array(<span class=hljs-keyword>$this</span>-&gt;_params)) {
+                    <span class=hljs-comment>// JSON Encode the array</span>
+                    <span class=hljs-keyword>$this</span>-&gt;_params = json_encode(<span class=hljs-keyword>$this</span>-&gt;_params);
+                }
+
+                curl_setopt(<span class=hljs-keyword>$this</span>-&gt;_request, CURLOPT_POSTFIELDS, <span class=hljs-keyword>$this</span>-&gt;_params);
+
+                <span class=hljs-comment>// Add a content-length header</span>
+                <span class=hljs-keyword>$this</span>-&gt;_headers[] = <span class=hljs-string>'Content-length: '</span> . strlen(<span class=hljs-keyword>$this</span>-&gt;_params);
+            }
+        }
+
+        <span class=hljs-comment>/**
+         * Add a query string to the request
+         */</span>
+        <span class=hljs-keyword>private</span> <span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>addQueryString</span><span class=hljs-params>()</span> </span>{
+
+            <span class=hljs-keyword>if</span>(<span class=hljs-keyword>$this</span>-&gt;_method == <span class=hljs-string>'GET'</span> &amp;&amp; is_array(<span class=hljs-keyword>$this</span>-&gt;_params) &amp;&amp; count(<span class=hljs-keyword>$this</span>-&gt;_params) &gt; <span class=hljs-number>0</span>) {
+
+                $query_string = <span class=hljs-string>'?'</span>;
+
+                <span class=hljs-keyword>foreach</span>(<span class=hljs-keyword>$this</span>-&gt;_params <span class=hljs-keyword>as</span> $param =&gt; $value) {
+
+                    $query_string = $query_string . $param . <span class=hljs-string>'='</span> . $value . <span class=hljs-string>'&amp;'</span>;
+                }
+
+                trim($query_string, <span class=hljs-string>'&amp;'</span>);
+
+                <span class=hljs-keyword>$this</span>-&gt;_url = <span class=hljs-keyword>$this</span>-&gt;_url . $query_string;
+            }
+            <span class=hljs-keyword>else</span> {
+
+                <span class=hljs-keyword>if</span>(is_array(<span class=hljs-keyword>$this</span>-&gt;_params) &amp;&amp; count(<span class=hljs-keyword>$this</span>-&gt;_params) &gt; <span class=hljs-number>0</span> &amp;&amp; strpos(<span class=hljs-keyword>$this</span>-&gt;_url, <span class=hljs-string>'{'</span>) !== <span class=hljs-keyword>false</span>) {
+                    <span class=hljs-comment>// Pattern match params against the url</span>
+                    <span class=hljs-keyword>foreach</span>(<span class=hljs-keyword>$this</span>-&gt;_params <span class=hljs-keyword>as</span> $param =&gt; $value) {
+                        <span class=hljs-keyword>$this</span>-&gt;_url = preg_replace(<span class=hljs-string>'/{'</span> . $param . <span class=hljs-string>'}/'</span>, $value, <span class=hljs-keyword>$this</span>-&gt;_url);
+                    }
+                }
+            }
+        }
+
+        <span class=hljs-comment>/**
+         * Send the request
+         */</span>
+        <span class=hljs-keyword>public</span> <span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>send</span><span class=hljs-params>()</span> </span>{
+
+            <span class=hljs-comment>// Initialise cUrl request</span>
+            <span class=hljs-keyword>$this</span>-&gt;_request = curl_init();
+
+            <span class=hljs-comment>// Return the response as a string</span>
+            curl_setopt(<span class=hljs-keyword>$this</span>-&gt;_request, CURLOPT_RETURNTRANSFER, <span class=hljs-number>1</span>);
+
+            <span class=hljs-comment>// Add a query string</span>
+            <span class=hljs-keyword>$this</span>-&gt;addQueryString();
+
+            <span class=hljs-comment>// Set the URL</span>
+            curl_setopt(<span class=hljs-keyword>$this</span>-&gt;_request, CURLOPT_URL, <span class=hljs-keyword>$this</span>-&gt;_url);
+
+            <span class=hljs-comment>// Set request method</span>
+            <span class=hljs-keyword>$this</span>-&gt;setMethod();
+
+            <span class=hljs-comment>// Add a body</span>
+            <span class=hljs-keyword>$this</span>-&gt;addBody();
+
+            <span class=hljs-keyword>if</span>(<span class=hljs-keyword>empty</span>(<span class=hljs-keyword>$this</span>-&gt;_headers) == <span class=hljs-keyword>false</span>) {
+                <span class=hljs-comment>// Set the headers</span>
+                curl_setopt(<span class=hljs-keyword>$this</span>-&gt;_request, CURLOPT_HTTPHEADER, <span class=hljs-keyword>$this</span>-&gt;_headers);
+            }
+
+            <span class=hljs-comment>// Disable SSL checks</span>
+            curl_setopt(<span class=hljs-keyword>$this</span>-&gt;_request, CURLOPT_SSL_VERIFYPEER, <span class=hljs-keyword>false</span>);
+            curl_setopt(<span class=hljs-keyword>$this</span>-&gt;_request, CURLOPT_SSL_VERIFYHOST, <span class=hljs-keyword>false</span>);
+
+            <span class=hljs-comment>// Send the request and store the body</span>
+            <span class=hljs-keyword>$this</span>-&gt;_response = <span class=hljs-keyword>new</span> Response(curl_exec(<span class=hljs-keyword>$this</span>-&gt;_request));
+
+            <span class=hljs-comment>// Set the status code</span>
+            <span class=hljs-keyword>$this</span>-&gt;_response-&gt;setStatusCode(curl_getinfo(<span class=hljs-keyword>$this</span>-&gt;_request, CURLINFO_HTTP_CODE));
+
+            <span class=hljs-comment>// Close the connection</span>
+            curl_close(<span class=hljs-keyword>$this</span>-&gt;_request);
+        }
+
+        <span class=hljs-comment>/**
+         * Get the response
+         *
+         * <span class=hljs-doctag>@return</span> object
+         */</span>
+        <span class=hljs-keyword>public</span> <span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>getResponse</span><span class=hljs-params>()</span> </span>{
+
+            <span class=hljs-keyword>return</span> <span class=hljs-keyword>$this</span>-&gt;_response;
+        }
+    }
+
+    <span class=hljs-class><span class=hljs-keyword>class</span> <span class=hljs-title>Response</span> </span>{
+
+        <span class=hljs-comment>/**
+         * <span class=hljs-doctag>@var</span> array
+         */</span>
+        <span class=hljs-keyword>protected</span> $_reason_phrases = <span class=hljs-keyword>array</span>(
+            <span class=hljs-comment>//Informational 1xx</span>
+            <span class=hljs-number>100</span> =&gt; <span class=hljs-string>"Continue"</span>,
+            <span class=hljs-number>101</span> =&gt; <span class=hljs-string>"Switching Protocols"</span>,
+
+            <span class=hljs-comment>// Successful 2xx</span>
+            <span class=hljs-number>200</span> =&gt; <span class=hljs-string>"OK"</span>,
+            <span class=hljs-number>201</span> =&gt; <span class=hljs-string>"Created"</span>,
+            <span class=hljs-number>202</span> =&gt; <span class=hljs-string>"Accepted"</span>,
+            <span class=hljs-number>203</span> =&gt; <span class=hljs-string>"Non-Authoritative Information"</span>,
+            <span class=hljs-number>204</span> =&gt; <span class=hljs-string>"No Content"</span>,
+            <span class=hljs-number>205</span> =&gt; <span class=hljs-string>"Reset Content"</span>,
+            <span class=hljs-number>206</span> =&gt; <span class=hljs-string>"Partial Content"</span>,
+
+            <span class=hljs-comment>// Redirection 3xx</span>
+            <span class=hljs-number>300</span> =&gt; <span class=hljs-string>"Multiple Choices"</span>,
+            <span class=hljs-number>301</span> =&gt; <span class=hljs-string>"Moved Permanently"</span>,
+            <span class=hljs-number>302</span> =&gt; <span class=hljs-string>"Found"</span>,
+            <span class=hljs-number>303</span> =&gt; <span class=hljs-string>"See Other"</span>,
+            <span class=hljs-number>304</span> =&gt; <span class=hljs-string>"Not Modified"</span>,
+            <span class=hljs-number>305</span> =&gt; <span class=hljs-string>"Use Proxy"</span>,
+            <span class=hljs-number>306</span> =&gt; <span class=hljs-string>"(Unused)"</span>,
+            <span class=hljs-number>307</span> =&gt; <span class=hljs-string>"Temporary Redirect"</span>,
+
+            <span class=hljs-comment>// Client Error 4xx</span>
+            <span class=hljs-number>400</span> =&gt; <span class=hljs-string>"Bad Request"</span>,
+            <span class=hljs-number>401</span> =&gt; <span class=hljs-string>"Unauthorized"</span>,
+            <span class=hljs-number>402</span> =&gt; <span class=hljs-string>"Payment Required"</span>,
+            <span class=hljs-number>403</span> =&gt; <span class=hljs-string>"Forbidden"</span>,
+            <span class=hljs-number>404</span> =&gt; <span class=hljs-string>"Not Found"</span>,
+            <span class=hljs-number>405</span> =&gt; <span class=hljs-string>"Method Not Allowed"</span>,
+            <span class=hljs-number>406</span> =&gt; <span class=hljs-string>"Not Acceptable"</span>,
+            <span class=hljs-number>407</span> =&gt; <span class=hljs-string>"Proxy Authentication Required"</span>,
+            <span class=hljs-number>408</span> =&gt; <span class=hljs-string>"Request Timeout"</span>,
+            <span class=hljs-number>409</span> =&gt; <span class=hljs-string>"Conflict"</span>,
+            <span class=hljs-number>410</span> =&gt; <span class=hljs-string>"Gone"</span>,
+            <span class=hljs-number>411</span> =&gt; <span class=hljs-string>"Length Required"</span>,
+            <span class=hljs-number>412</span> =&gt; <span class=hljs-string>"Precondition Failed"</span>,
+            <span class=hljs-number>413</span> =&gt; <span class=hljs-string>"Request Entity Too Large"</span>,
+            <span class=hljs-number>414</span> =&gt; <span class=hljs-string>"Request-URI Too Long"</span>,
+            <span class=hljs-number>415</span> =&gt; <span class=hljs-string>"Unsupported Media Type"</span>,
+            <span class=hljs-number>416</span> =&gt; <span class=hljs-string>"Requested Range Not Satisfiable"</span>,
+            <span class=hljs-number>417</span> =&gt; <span class=hljs-string>"Expectation Failed"</span>,
+
+            <span class=hljs-comment>// Server Error 5xx</span>
+            <span class=hljs-number>500</span> =&gt; <span class=hljs-string>"Internal Server Error"</span>,
+            <span class=hljs-number>501</span> =&gt; <span class=hljs-string>"Not Implemented"</span>,
+            <span class=hljs-number>502</span> =&gt; <span class=hljs-string>"Bad Gateway"</span>,
+            <span class=hljs-number>503</span> =&gt; <span class=hljs-string>"Service Unavailable"</span>,
+            <span class=hljs-number>504</span> =&gt; <span class=hljs-string>"Gateway Timeout"</span>,
+            <span class=hljs-number>505</span> =&gt; <span class=hljs-string>"HTTP Version Not Supported"</span>
+        );
+
+        <span class=hljs-comment>/**
+         * <span class=hljs-doctag>@var</span> integer
+         */</span>
+        <span class=hljs-keyword>protected</span> $_status_code;
+
+        <span class=hljs-comment>/**
+         * <span class=hljs-doctag>@var</span> string
+         */</span>
+        <span class=hljs-keyword>protected</span> $_body;
+
+        <span class=hljs-comment>/**
+         * Constructor
+         *
+         * <span class=hljs-doctag>@param</span>   string      $body
+         */</span>
+        <span class=hljs-keyword>public</span> <span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>__construct</span><span class=hljs-params>($body)</span> </span>{
+
+            <span class=hljs-keyword>$this</span>-&gt;_body = $body;
+        }
+
+        <span class=hljs-comment>/**
+         * Constructor
+         *
+         * <span class=hljs-doctag>@param</span>   string      $status_code
+         */</span>
+        <span class=hljs-keyword>public</span> <span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>setStatusCode</span><span class=hljs-params>($status_code)</span> </span>{
+
+            <span class=hljs-keyword>$this</span>-&gt;_status_code = $status_code;
+        }
+
+        <span class=hljs-comment>/**
+         * Get status code
+         *
+         * <span class=hljs-doctag>@return</span>  integer
+         */</span>
+        <span class=hljs-keyword>public</span> <span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>getStatusCode</span><span class=hljs-params>()</span> </span>{
+
+            <span class=hljs-keyword>return</span> <span class=hljs-keyword>$this</span>-&gt;_status_code;
+        }
+
+        <span class=hljs-comment>/**
+         * Get body
+         *
+         * <span class=hljs-doctag>@return</span>  string
+         */</span>
+        <span class=hljs-keyword>public</span> <span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>getBody</span><span class=hljs-params>()</span> </span>{
+
+            <span class=hljs-keyword>return</span> <span class=hljs-keyword>$this</span>-&gt;_body;
+        }
+
+        <span class=hljs-comment>/**
+         * Get body JSON Decoded
+         *
+         * <span class=hljs-doctag>@return</span>  object|null
+         */</span>
+        <span class=hljs-keyword>public</span> <span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>getBodyDecoded</span><span class=hljs-params>()</span> </span>{
+
+            <span class=hljs-keyword>return</span> json_decode(<span class=hljs-keyword>$this</span>-&gt;_body);
+        }
+
+        <span class=hljs-comment>/**
+         * Get reason phrase
+         *
+         * <span class=hljs-doctag>@return</span> string|boolean
+         */</span>
+        <span class=hljs-keyword>public</span> <span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>getReasonPhrase</span><span class=hljs-params>()</span> </span>{
+
+            <span class=hljs-keyword>if</span>(array_key_exists(<span class=hljs-keyword>$this</span>-&gt;_status_code, <span class=hljs-keyword>$this</span>-&gt;_reason_phrases)) {
+
+                <span class=hljs-keyword>return</span> <span class=hljs-keyword>$this</span>-&gt;_reason_phrases[<span class=hljs-keyword>$this</span>-&gt;_status_code];
+            }
+            <span class=hljs-keyword>else</span> {
+
+                <span class=hljs-keyword>return</span> <span class=hljs-keyword>false</span>;
+            }
+        }
+    }
+
+
+
+</code></pre><p> </p><h2><a class=anchor aria-hidden=true id=login></a><a href=#login class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Login</h2><p>There are two options to request the <strong>login</strong> route:</p><ul><li>with username and password</li><li>with api token (access token)</li></ul><p>Example of login with username and password parameters.</p><pre><code class=hljs>    <span class=php><span class=hljs-meta>&lt;?php</span>
+
+        <span class=hljs-comment>// Include Request and Response classes</span>
+
+        $url = <span class=hljs-string>'https://api.gatherstar.io/v2/login'</span>;
+
+        $params = <span class=hljs-keyword>array</span>(
+            <span class=hljs-string>'username'</span>  =&gt; <span class=hljs-string>'sample_username'</span>,
+            <span class=hljs-string>'password'</span>  =&gt; <span class=hljs-string>'sample_password'</span>
+        );
+
+        <span class=hljs-comment>// Create a new Request object</span>
+        $request = <span class=hljs-keyword>new</span> Request($url, <span class=hljs-string>'POST'</span>, $params);
+
+        <span class=hljs-comment>// Send the request</span>
+        $request-&gt;send();
+
+        <span class=hljs-comment>// Get the Response object</span>
+        $response = $request-&gt;getResponse();
+
+        <span class=hljs-keyword>if</span>($response-&gt;getStatusCode() == <span class=hljs-number>200</span>) {
+
+            <span class=hljs-comment>// Retrieve the session token details</span>
+            $token = $response-&gt;getBodyDecoded();
+
+            print_r($token);
+        }
+        <span class=hljs-keyword>else</span> {
+
+            <span class=hljs-keyword>echo</span> $response-&gt;getStatusCode() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getReasonPhrase() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getBody() . PHP_EOL;
+        }
+    <span class=hljs-meta>?&gt;</span></span>
+</code></pre><p> </p><h3><a class=anchor aria-hidden=true id=example-of-login-with-api-token-access-token></a><a href=#example-of-login-with-api-token-access-token class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example of login with API token (access token)</h3><pre><code class=hljs><span class=php><span class=hljs-meta>&lt;?php</span>
+
+        <span class=hljs-comment>// Include Request and Response classes</span>
+
+        $url = <span class=hljs-string>'https://api.gatherstar.io/v2/login'</span>;
+
+        $params = <span class=hljs-keyword>array</span>(
+                <span class=hljs-string>'api_token'</span>  =&gt; <span class=hljs-string>'sample_token_2bb447abb71b69368901a....'</span>
+            );
+
+        <span class=hljs-comment>// Create a new Request object</span>
+        $request = <span class=hljs-keyword>new</span> Request($url, <span class=hljs-string>'POST'</span>, $params);
+
+        <span class=hljs-comment>// Send the request</span>
+        $request-&gt;send();
+
+        <span class=hljs-comment>// Get the Response object</span>
+        $response = $request-&gt;getResponse();
+
+        <span class=hljs-keyword>if</span>($response-&gt;getStatusCode() == <span class=hljs-number>200</span>) {
+
+            <span class=hljs-comment>// Retrieve the session token details</span>
+            $token = $response-&gt;getBodyDecoded();
+
+            print_r($token);
+        }
+        <span class=hljs-keyword>else</span> {
+
+            <span class=hljs-keyword>echo</span> $response-&gt;getStatusCode() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getReasonPhrase() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getBody() . PHP_EOL;
+        }
+    <span class=hljs-meta>?&gt;</span></span>
+</code></pre><p> </p><h2><a class=anchor aria-hidden=true id=authentication></a><a href=#authentication class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Authentication</h2><p>Each request to user related content requires an <strong>Authorization</strong> header to be set, with the value containing the token type and Session token received from the API Login request.</p><p>A valid <strong>/login</strong> request to the API will return the following json payload.</p><pre><code class=hljs>    {
+      <span class=hljs-attr>"token"</span>: <span class=hljs-string>""</span>,
+      <span class=hljs-attr>"type"</span>: <span class=hljs-string>""</span>,
+      <span class=hljs-attr>"expires_in"</span>: <span class=hljs-number>0</span>
+    }
+</code></pre><p>The <strong>Session token</strong> should be included in all subsequent user related content requests to the API.</p><p>The <strong>type</strong> is to be prepended to the the token, separated by a single space.</p><pre><code class=hljs>Bearer <span class=hljs-number>4e63518</span>d383d8fcaefb516fe708b893727463031
+</code></pre><p>The <strong>expires_in</strong> is the time in seconds that the token will be valid for. When this time expires, a new token will need to be attained via the /login request.</p><p> </p><h3><a class=anchor aria-hidden=true id=example-of-getting-and-setting-authorization-header-with-username-and-password></a><a href=#example-of-getting-and-setting-authorization-header-with-username-and-password class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example of Getting and Setting Authorization Header with username and password</h3><pre><code class=hljs>    <span class=php><span class=hljs-meta>&lt;?php</span>
+
+        <span class=hljs-comment>// Include Request and Response classes</span>
+
+        <span class=hljs-comment>// Login</span>
+        $url = <span class=hljs-string>'https://api.gatherstar.io/v2/login'</span>;
+
+        $params = <span class=hljs-keyword>array</span>(
+            <span class=hljs-string>'username'</span>  =&gt; <span class=hljs-string>'sample_username'</span>,
+            <span class=hljs-string>'password'</span>  =&gt; <span class=hljs-string>'sample_password'</span>
+        );
+
+        <span class=hljs-comment>// Create a new Request object</span>
+        $request = <span class=hljs-keyword>new</span> Request($url, <span class=hljs-string>'POST'</span>, $params);
+
+        <span class=hljs-comment>// Send the request</span>
+        $request-&gt;send();
+
+        <span class=hljs-comment>// Get the Response object</span>
+        $response = $request-&gt;getResponse();
+
+        <span class=hljs-keyword>if</span>($response-&gt;getStatusCode() == <span class=hljs-number>200</span>) {
+
+            <span class=hljs-comment>// Retrieve the session token details</span>
+            $token = $response-&gt;getBodyDecoded();
+
+            <span class=hljs-comment>// Get Campaigns</span>
+            $url = <span class=hljs-string>'https://api.gatherstar.io/v2/campaigns'</span>;
+
+            <span class=hljs-comment>// Create a new Request object</span>
+            $request = <span class=hljs-keyword>new</span> Request($url, <span class=hljs-string>'GET'</span>);
+
+            <span class=hljs-comment>// Set the Authorization Header</span>
+            $request-&gt;setAuthorizationHeader($token-&gt;type, $token-&gt;token);
+
+            <span class=hljs-comment>// Send the request</span>
+            $request-&gt;send();
+
+            <span class=hljs-comment>// Get the Response object</span>
+            $response = $request-&gt;getResponse();
+
+            <span class=hljs-keyword>if</span>($response-&gt;getStatusCode() == <span class=hljs-number>200</span>) {
+
+                <span class=hljs-comment>// Retrieve the campaigns</span>
+                $campaigns = $response-&gt;getBodyDecoded();
+
+                <span class=hljs-keyword>foreach</span>($campaigns-&gt;result <span class=hljs-keyword>as</span> $campaign) {
+                    <span class=hljs-comment>// Display the campaign names</span>
+                    <span class=hljs-keyword>echo</span> $campaign-&gt;name . PHP_EOL;
+                }
+            }
+            <span class=hljs-keyword>else</span> {
+                <span class=hljs-comment>// Campaigns request error</span>
+                <span class=hljs-keyword>echo</span> $response-&gt;getStatusCode() . PHP_EOL;
+                <span class=hljs-keyword>echo</span> $response-&gt;getReasonPhrase() . PHP_EOL;
+                <span class=hljs-keyword>echo</span> $response-&gt;getBody();
+            }
+        }
+        <span class=hljs-keyword>else</span> {
+            <span class=hljs-comment>// Invalid Login</span>
+            <span class=hljs-keyword>echo</span> $response-&gt;getStatusCode() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getReasonPhrase() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getBody();
+        }
+    <span class=hljs-meta>?&gt;</span></span>
+</code></pre><p> </p><h4><a class=anchor aria-hidden=true id=example-of-getting-and-setting-authorization-header-with-api-token></a><a href=#example-of-getting-and-setting-authorization-header-with-api-token class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example of Getting and Setting Authorization Header with API token</h4><pre><code class=hljs><span class=php><span class=hljs-meta>&lt;?php</span>
+
+        <span class=hljs-comment>// Include Request and Response classes</span>
+
+        <span class=hljs-comment>// Login</span>
+        $url = <span class=hljs-string>'https://api.gatherstar.io/v2/login'</span>;
+
+        $params = <span class=hljs-keyword>array</span>(
+            <span class=hljs-string>'api_token'</span>  =&gt; <span class=hljs-string>'sample_token_2bb447abb71b69368901a....'</span>
+        );
+
+        ...
+
+    <span class=hljs-meta>?&gt;</span></span>
+</code></pre><p> </p><h2><a class=anchor aria-hidden=true id=collections></a><a href=#collections class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Collections</h2><p>The following is an example of a request to get the <strong>Browsers</strong> collection.</p><pre><code class=hljs><span class=php><span class=hljs-meta>&lt;?php</span>
+
+        <span class=hljs-comment>// Include Request and Response classes</span>
+
+        $url = <span class=hljs-string>'https://api.gatherstar.io/v2/collections/browsers'</span>;
+
+        <span class=hljs-comment>// Create a new Request object</span>
+        $request = <span class=hljs-keyword>new</span> Request($url, <span class=hljs-string>'GET'</span>);
+
+        <span class=hljs-comment>// Set the Authorization Header retrieved from earlier Login request</span>
+        $request-&gt;setAuthorizationHeader($token-&gt;type, $token-&gt;token);
+
+        <span class=hljs-comment>// Send the request</span>
+        $request-&gt;send();
+
+        <span class=hljs-comment>// Get the Response object</span>
+        $response = $request-&gt;getResponse();
+
+        <span class=hljs-keyword>if</span>($response-&gt;getStatusCode() == <span class=hljs-number>200</span>) {
+
+            $browsers = $response-&gt;getBodyDecoded();
+
+            <span class=hljs-keyword>foreach</span>($browsers <span class=hljs-keyword>as</span> $browser) {
+
+                <span class=hljs-keyword>echo</span> $browser-&gt;id . <span class=hljs-string>': '</span> . $browser-&gt;name . PHP_EOL;
+            }
+        }
+        <span class=hljs-keyword>else</span> {
+            <span class=hljs-comment>// Collection not found</span>
+            <span class=hljs-keyword>echo</span> $response-&gt;getStatusCode() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getReasonPhrase() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getBody();
+        }
+    <span class=hljs-meta>?&gt;</span></span>
+</code></pre><h2><a class=anchor aria-hidden=true id=statistics></a><a href=#statistics class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Statistics</h2><p>The following is an example of an advertiser request to <strong>statistics/a/date</strong>.</p><p>In case <strong>additional_group_by</strong> value is defined, the request will be grouped by the main route field and the extra one(s).</p><h3><a class=anchor aria-hidden=true id=example-of-statistics-per-date-filtered-by-campaign-id-1234></a><a href=#example-of-statistics-per-date-filtered-by-campaign-id-1234 class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example of statistics per date filtered by campaign ID 1234.</h3><pre><code class=hljs>    <span class=php><span class=hljs-meta>&lt;?php</span>
+
+        <span class=hljs-comment>// Include Request and Response classes</span>
+
+        $url = <span class=hljs-string>'https://api.gatherstar.io/v2/statistics/a/date'</span>;
+
+        <span class=hljs-comment>// Specify the campaign id</span>
+        $params = <span class=hljs-keyword>array</span>(
+           <span class=hljs-string>'campaignid'</span>  =&gt; <span class=hljs-number>1234</span>
+        );
+
+        $request = <span class=hljs-keyword>new</span> Request($url, <span class=hljs-string>'GET'</span>, $params);
+
+        <span class=hljs-comment>// Set the Authorization Header, retrieved from earlier Login request</span>
+        $request-&gt;setAuthorizationHeader($token-&gt;type, $token-&gt;token);
+
+        <span class=hljs-comment>// Send the request</span>
+        $request-&gt;send();
+
+        <span class=hljs-comment>// Get the response object</span>
+        $response = $request-&gt;getResponse();
+
+        <span class=hljs-keyword>if</span>($response-&gt;getStatusCode() == <span class=hljs-number>200</span>) {
+
+            $statistics = $response-&gt;getBodyDecoded();
+
+            <span class=hljs-keyword>foreach</span>($statistics-&gt;result <span class=hljs-keyword>as</span> $statistic) {
+
+                <span class=hljs-keyword>echo</span> $statistic-&gt;ddate . <span class=hljs-string>': '</span> . $statistic-&gt;value . PHP_EOL;
+            }
+        }
+        <span class=hljs-keyword>else</span> {
+            <span class=hljs-comment>// Campaign statistics not found</span>
+            <span class=hljs-keyword>echo</span> $response-&gt;getStatusCode() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getReasonPhrase() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getBody();
+        }
+    <span class=hljs-meta>?&gt;</span></span>
+</code></pre><h3><a class=anchor aria-hidden=true id=example-of-statistics-per-date-with-additional-group-by-campaign></a><a href=#example-of-statistics-per-date-with-additional-group-by-campaign class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example of statistics per date with additional group by campaign.</h3><pre><code class=hljs><span class=php><span class=hljs-meta>&lt;?php</span>
+
+        <span class=hljs-comment>// Include Request and Response classes</span>
+
+        $url = <span class=hljs-string>'https://api.gatherstar.io/v2/statistics/a/date'</span>;
+
+        <span class=hljs-comment>// Specify the campaign id</span>
+        $params = <span class=hljs-keyword>array</span>(
+           <span class=hljs-string>'additional_group_by'</span>  =&gt; <span class=hljs-string>'campaign'</span>
+        );
+
+        $request = <span class=hljs-keyword>new</span> Request($url, <span class=hljs-string>'GET'</span>, $params);
+
+        <span class=hljs-comment>// Set the Authorization Header, retrieved from earlier Login request</span>
+        $request-&gt;setAuthorizationHeader($token-&gt;type, $token-&gt;token);
+
+        <span class=hljs-comment>// Send the request</span>
+        $request-&gt;send();
+
+        <span class=hljs-comment>// Get the response object</span>
+        $response = $request-&gt;getResponse();
+
+        <span class=hljs-keyword>if</span>($response-&gt;getStatusCode() == <span class=hljs-number>200</span>) {
+
+            $statistics = $response-&gt;getBodyDecoded();
+
+            <span class=hljs-keyword>foreach</span>($statistics-&gt;result <span class=hljs-keyword>as</span> $statistic) {
+                <span class=hljs-keyword>echo</span> $statistic-&gt;ddate . <span class=hljs-string>' - '</span> . $statistic-&gt;idcampaign . <span class=hljs-string>': '</span> . $statistic-&gt;value . PHP_EOL;
+            }
+        }
+        <span class=hljs-keyword>else</span> {
+            <span class=hljs-comment>// Campaign statistics not found</span>
+            <span class=hljs-keyword>echo</span> $response-&gt;getStatusCode() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getReasonPhrase() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getBody();
+        }
+    <span class=hljs-meta>?&gt;</span></span>
+</code></pre><p>post /statistics/a/global</p><pre><code class=hljs><span class=hljs-keyword>Get</span> <span class=hljs-keyword>global</span> advertiser <span class=hljs-keyword>statistics</span>
+</code></pre><p> </p><h3><a class=anchor aria-hidden=true id=example-1-of-global-statistics></a><a href=#example-1-of-global-statistics class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example 1 of global statistics</h3><p>Example for global statistics request.</p><p>Only the <code>group_by</code> parameter is mandatory. The default values for the other parameters can be found <a href=https://api.gatherstar.io/v2/docs/#!/47statistics/post_statistics_a_global>Here</a>.</p><p>Please note that the global statistic routes (<code>statistics/a/global</code>, <code>statistics/p/global</code>) have different parameters format.</p><pre><code class=hljs>    <span class=php><span class=hljs-meta>&lt;?php</span>
+
+        <span class=hljs-comment>// Include Request and Response classes</span>
+
+        $url = <span class=hljs-string>'https://api.gatherstar.io/v2/statistics/a/global'</span>;
+
+        <span class=hljs-comment>// Specify the group_by</span>
+        $params = [
+            <span class=hljs-string>"group_by"</span> =&gt; [<span class=hljs-string>"date"</span>]
+        ];
+
+        $request = <span class=hljs-keyword>new</span> Request($url, <span class=hljs-string>'POST'</span>, $params);
+
+        <span class=hljs-comment>// Set the Authorization Header, retrieved from earlier Login request</span>
+        $request-&gt;setAuthorizationHeader($token-&gt;type, $token-&gt;token);
+
+        <span class=hljs-comment>// Send the request</span>
+        $request-&gt;send();
+
+        <span class=hljs-comment>// Get the response object</span>
+        $response = $request-&gt;getResponse();
+
+        <span class=hljs-keyword>if</span>($response-&gt;getStatusCode() == <span class=hljs-number>200</span>) {
+
+            $statistics = $response-&gt;getBodyDecoded();
+
+            <span class=hljs-keyword>foreach</span>($statistics-&gt;result <span class=hljs-keyword>as</span> $statistic) {
+                <span class=hljs-keyword>echo</span> <span class=hljs-string>'Date: '</span> . $statistic-&gt;group_by-&gt;date-&gt;date . <span class=hljs-string>' -  Impressions: '</span> . $statistic-&gt;impressions .<span class=hljs-string>' - Cost: '</span> .  $statistic-&gt;cost . PHP_EOL;
+            }
+        }
+        <span class=hljs-keyword>else</span> {
+            <span class=hljs-comment>// Campaign statistics not found</span>
+            <span class=hljs-keyword>echo</span> $response-&gt;getStatusCode() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getReasonPhrase() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getBody();
+        }
+    <span class=hljs-meta>?&gt;</span></span>
+</code></pre><p> </p><h3><a class=anchor aria-hidden=true id=example-2-of-global-statistics></a><a href=#example-2-of-global-statistics class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example 2 of global statistics</h3><p>Get statistics per date including sum totals.</p><pre><code class=hljs>    <span class=php><span class=hljs-meta>&lt;?php</span>
+
+        <span class=hljs-comment>// Include Request and Response classes</span>
+
+        $url = <span class=hljs-string>'https://api.gatherstar.io/v2/statistics/a/global'</span>;
+
+        <span class=hljs-comment>// Specify the campaign id</span>
+        $params = [
+            <span class=hljs-string>"filter"</span> =&gt; [
+                <span class=hljs-string>"date_from"</span> =&gt; <span class=hljs-string>"2019-01-10"</span>,
+                <span class=hljs-string>"date_to"</span> =&gt; <span class=hljs-string>"2019-01-31"</span>,
+            ],
+            <span class=hljs-string>"totals"</span> =&gt; <span class=hljs-number>1</span>,
+            <span class=hljs-string>"group_by"</span> =&gt; [<span class=hljs-string>"date"</span>]
+        ];
+
+        $request = <span class=hljs-keyword>new</span> Request($url, <span class=hljs-string>'POST'</span>, $params);
+
+        <span class=hljs-comment>// Set the Authorization Header, retrieved from earlier Login request</span>
+        $request-&gt;setAuthorizationHeader($token-&gt;type, $token-&gt;token);
+
+        <span class=hljs-comment>// Send the request</span>
+        $request-&gt;send();
+
+        <span class=hljs-comment>// Get the response object</span>
+        $response = $request-&gt;getResponse();
+
+        <span class=hljs-keyword>if</span>($response-&gt;getStatusCode() == <span class=hljs-number>200</span>) {
+
+            $statistics = $response-&gt;getBodyDecoded();
+
+            <span class=hljs-keyword>foreach</span>($statistics-&gt;result <span class=hljs-keyword>as</span> $statistic) {
+                <span class=hljs-keyword>echo</span> <span class=hljs-string>'Date: '</span> . $statistic-&gt;group_by-&gt;date-&gt;date . <span class=hljs-string>' -  Impressions: '</span> . $statistic-&gt;impressions .<span class=hljs-string>' - Cost: '</span> .  $statistic-&gt;cost . PHP_EOL;
+            }
+
+            <span class=hljs-keyword>echo</span> <span class=hljs-string>'Total cost:'</span> . $statistics-&gt;result_total-&gt;cost . PHP_EOL;
+        }
+        <span class=hljs-keyword>else</span> {
+            <span class=hljs-comment>// Campaign statistics not found</span>
+            <span class=hljs-keyword>echo</span> $response-&gt;getStatusCode() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getReasonPhrase() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getBody();
+        }
+    <span class=hljs-meta>?&gt;</span></span>
+</code></pre><p> </p><h3><a class=anchor aria-hidden=true id=example-3-of-global-statistics></a><a href=#example-3-of-global-statistics class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example 3 of global statistics</h3><p>Get statistics per campaign and country filtered by specific date ordered by impressions.</p><pre><code class=hljs>    <span class=php><span class=hljs-meta>&lt;?php</span>
+
+        <span class=hljs-comment>// Include Request and Response classes</span>
+
+        $url = <span class=hljs-string>'https://api.gatherstar.io/v2/statistics/a/global'</span>;
+
+        $params = [
+            <span class=hljs-string>"filter"</span> =&gt; [
+                <span class=hljs-string>"date_from"</span> =&gt; <span class=hljs-string>"2019-01-30"</span>,
+                <span class=hljs-string>"date_to"</span> =&gt; <span class=hljs-string>"2019-01-30"</span>,
+            ],
+            <span class=hljs-string>"group_by"</span> =&gt; [<span class=hljs-string>"country_iso"</span>, <span class=hljs-string>"campaign_id"</span>],
+            <span class=hljs-string>"order_by"</span> =&gt; [
+                [<span class=hljs-string>"field"</span> =&gt; <span class=hljs-string>"impressions"</span>, <span class=hljs-string>"order"</span> =&gt; <span class=hljs-string>"desc"</span>]
+            ]
+        ];
+
+
+        $request = <span class=hljs-keyword>new</span> Request($url, <span class=hljs-string>'POST'</span>, $params);
+
+        <span class=hljs-comment>// Set the Authorization Header, retrieved from earlier Login request</span>
+        $request-&gt;setAuthorizationHeader($token-&gt;type, $token-&gt;token);
+
+        <span class=hljs-comment>// Send the request</span>
+        $request-&gt;send();
+
+        <span class=hljs-comment>// Get the response object</span>
+        $response = $request-&gt;getResponse();
+
+        <span class=hljs-keyword>if</span>($response-&gt;getStatusCode() == <span class=hljs-number>200</span>) {
+
+            $statistics = $response-&gt;getBodyDecoded();
+
+            <span class=hljs-keyword>foreach</span>($statistics-&gt;result <span class=hljs-keyword>as</span> $statistic) {
+                <span class=hljs-keyword>echo</span> <span class=hljs-string>'Country: '</span> . $statistic-&gt;group_by-&gt;country_iso-&gt;country_iso . <span class=hljs-string>' -  Campaign ID: '</span> . $statistic-&gt;group_by-&gt;campaign_id-&gt;id .<span class=hljs-string>' - Cost: '</span> .  $statistic-&gt;cost . PHP_EOL;
+            }
+        }
+        <span class=hljs-keyword>else</span> {
+            <span class=hljs-comment>// Campaign statistics not found</span>
+            <span class=hljs-keyword>echo</span> $response-&gt;getStatusCode() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getReasonPhrase() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getBody();
+        }
+    <span class=hljs-meta>?&gt;</span></span>
+</code></pre><p> </p><h3><a class=anchor aria-hidden=true id=example-4-of-global-statistics></a><a href=#example-4-of-global-statistics class=hash-link aria-hidden=true><svg height=16 viewBox="0 0 16 16" width=16 aria-hidden=true class=hash-link-icon version=1.1><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule=evenodd></path></svg></a>Example 4 of global statistics</h3><p>Get publisher statistics per zone and country filtered by specific operating system.</p><pre><code class=hljs><span class=php><span class=hljs-meta>&lt;?php</span>
+
+        <span class=hljs-comment>// Include Request and Response classes</span>
+
+        $url = <span class=hljs-string>'https://api.gatherstar.io/v2/statistics/p/global'</span>;
+
+        $params = [
+            <span class=hljs-string>"filter"</span> =&gt; [
+                <span class=hljs-string>"date_from"</span> =&gt; <span class=hljs-string>"2019-01-30"</span>,
+                <span class=hljs-string>"date_to"</span> =&gt; <span class=hljs-string>"2019-01-30"</span>,
+                <span class=hljs-string>"operating_system_id"</span> =&gt; [<span class=hljs-number>11</span>, <span class=hljs-number>12</span>]
+            ],
+            <span class=hljs-string>"group_by"</span> =&gt; [<span class=hljs-string>"zone_id"</span>, <span class=hljs-string>"country_iso"</span>]
+        ];
+
+
+        $request = <span class=hljs-keyword>new</span> Request($url, <span class=hljs-string>'POST'</span>, $params);
+
+        <span class=hljs-comment>// Set the Authorization Header, retrieved from earlier Login request</span>
+        $request-&gt;setAuthorizationHeader($token-&gt;type, $token-&gt;token);
+
+        <span class=hljs-comment>// Send the request</span>
+        $request-&gt;send();
+
+        <span class=hljs-comment>// Get the response object</span>
+        $response = $request-&gt;getResponse();
+
+        <span class=hljs-keyword>if</span>($response-&gt;getStatusCode() == <span class=hljs-number>200</span>) {
+
+            $statistics = $response-&gt;getBodyDecoded();
+
+            <span class=hljs-keyword>foreach</span>($statistics-&gt;result <span class=hljs-keyword>as</span> $statistic) {
+                <span class=hljs-keyword>echo</span> <span class=hljs-string>' Zone ID:'</span> . $statistic-&gt;group_by-&gt;zone_id-&gt;id . <span class=hljs-string>' - Country: '</span> . $statistic-&gt;group_by-&gt;country_iso-&gt;country_iso .<span class=hljs-string>' - Revenue: '</span> .  $statistic-&gt;revenue . PHP_EOL;
+            }
+        }
+        <span class=hljs-keyword>else</span> {
+            <span class=hljs-comment>// Campaign statistics not found</span>
+            <span class=hljs-keyword>echo</span> $response-&gt;getStatusCode() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getReasonPhrase() . PHP_EOL;
+            <span class=hljs-keyword>echo</span> $response-&gt;getBody();
+        }
+    <span class=hljs-meta>?&gt;</span></span>
+</code></pre></span></div></article></div><div class=docs-prevnext><a href=../api-manual-changelog.html class="button docs-prev"><span class=arrow-prev>← </span><span>Previous</span></a><a href=../ad-placement-api-overview/index.html class="button docs-next"><span>Ad Placement API Overview</span><span class=arrow-next> →</span></a></div></div></div><nav class=onPageNav><ul class=toc-headings><li><a href=#overview>Overview</a></li><li><a href=#login>Login</a><ul class=toc-headings><li><a href=#example-of-login-with-api-token-access-token>Example of login with API token (access token)</a></li></ul></li><li><a href=#authentication>Authentication</a><ul class=toc-headings><li><a href=#example-of-getting-and-setting-authorization-header-with-username-and-password>Example of Getting and Setting Authorization Header with username and password</a></li></ul></li><li><a href=#collections>Collections</a></li><li><a href=#statistics>Statistics</a><ul class=toc-headings><li><a href=#example-of-statistics-per-date-filtered-by-campaign-id-1234>Example of statistics per date filtered by campaign ID 1234.</a></li><li><a href=#example-of-statistics-per-date-with-additional-group-by-campaign>Example of statistics per date with additional group by campaign.</a></li><li><a href=#example-1-of-global-statistics>Example 1 of global statistics</a></li><li><a href=#example-2-of-global-statistics>Example 2 of global statistics</a></li><li><a href=#example-3-of-global-statistics>Example 3 of global statistics</a></li><li><a href=#example-4-of-global-statistics>Example 4 of global statistics</a></li></ul></li></ul></nav></div><footer class=nav-footer id=footer style=display:none><section class=sitemap><a href=../../index.html class=nav-home><img alt=Documentation src=../../img/exads.svg height=58 width=66 /></a><div></div><div><h5>Community</h5><a href=https://github.com/GatherStar target=_blank rel="noreferrer noopener">Github</a></div><div><h5>Useful Links</h5><a href=https://www.exads.com/ target=_blank>GatherStar</a></div></section><section class=copyright>Copyright © 2025 GatherStar</section></footer></div><script src=../../../cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js></script><script>document.addEventListener("keyup",function(e){if(e.target===document.body&&191===e.keyCode){const e=document.getElementById("search_input_react");e&&e.focus()}});</script><script>docsearch({appId:"2PYAVRHSND",apiKey:"e7e7cec138ad66530a6fb8a42c66b8ce",indexName:"exads",inputSelector:"#search_input_react",algoliaOptions:{}});</script></body></html>
